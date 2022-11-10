@@ -6,7 +6,7 @@ const sequelize = require("../config/connection");
 // Initialize post model (table) by extending off Sequelize's Model class
 class Post extends Model {}
 
-// set up fields and rules for Product model
+// set up fields and rules for Post model
 Post.init(
   {
     // define columns
