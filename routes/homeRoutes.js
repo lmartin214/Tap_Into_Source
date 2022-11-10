@@ -9,6 +9,12 @@ res.render('home',{
 })
 })
 
+router.get('/profile',(req,res)=>{
+    res.render('profile',{
+        layout:'main'
+    })
+    })
+
 router.get('/signup',(req,res)=>{
     if (req.session.loggedIn){
         res.redirect('/')
