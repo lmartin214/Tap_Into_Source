@@ -22,7 +22,7 @@ res.status(500).json(err)
 }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   // update a category by its `id` value
 });
 
