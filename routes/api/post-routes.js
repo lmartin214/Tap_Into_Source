@@ -9,6 +9,8 @@ router.get("/", (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
+//get posts by country
+
 // get posts by zip
 router.get("/:zip", async (req, res) => {
   try {
@@ -30,6 +32,7 @@ router.post("/", async (req, res) => {
   try {
     const newPost = await Post.create({
       type: req.body.type,
+      country: req.body.type,
       zip: req.body.zip,
       state: req.body.state,
     });

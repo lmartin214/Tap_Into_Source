@@ -2,6 +2,7 @@ const postForm = async function (event) {
   event.preventDefault();
   console.log("hello hello!");
   const type = document.querySelector("#type");
+  const country = document.querySelector("#country");
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
 
@@ -9,6 +10,7 @@ const postForm = async function (event) {
     method: "POST",
     body: JSON.stringify({
       type: type.value,
+      country: country.value,
       zip: zip.value,
       state: state.value,
     }),
