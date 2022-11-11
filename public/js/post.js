@@ -3,12 +3,14 @@ const postForm = async function (event) {
   console.log("hello hello!");
   const type = document.querySelector("#type");
   const zip = document.querySelector("#zip");
+  const state = document.querySelector("#state");
 
   const response = await fetch("/api/posts", {
     method: "POST",
     body: JSON.stringify({
       type: type.value,
       zip: zip.value,
+      state: state.value,
     }),
     headers: {
       "Content-Type": "application/json",

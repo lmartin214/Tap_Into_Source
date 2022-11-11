@@ -24,13 +24,14 @@ router.get("/:zip", async (req, res) => {
   }
 });
 
-// create new product
+// create new post **********
 router.post("/", async (req, res) => {
   console.log("in the route");
   try {
     const newPost = await Post.create({
       type: req.body.type,
       zip: req.body.zip,
+      state: req.body.state,
     });
     console.log("new post");
     res.json(newPost);
