@@ -52,6 +52,11 @@ Post.init(
       allowNull: false,
       comments: "",
     },
+    whatTests: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      comments: "",
+    },
     // if yes, which tests have you done? what were the results? 10) does not apply instead of boolean
     // testsDone: {
     //   type: DataTypes.STRING,

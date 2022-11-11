@@ -188,24 +188,36 @@
         </div>
       </div>
     
+{{! Water Testing }}
 
-
-      {{!-- {{! tested? }}
-          <div class="mb-3">Did you test the water?
-
-      <div class="d-block my-3">
-        <div class="custom-control custom-radio">
-          <input
-            id="moving"
-            name="water"
-            type="radio"
-            class="custom-control-input"
-            checked=""
-            required=""
-          />
-          <label class="custom-control-label" for="moving">Moving Water</label>
-        </div>
-         --}}
+<h4 class="form-check form-check-inline"></h4>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">yes</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">no</label>
+</div>
+{{! if yes,...}}
+<div class="form-group">
+    <label for="exampleFormControlSelect2">tests</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>1.  Lead - positive (>15ppb) / negative (<15ppb)</option>
+      <option>2.  pH levels - a scale of 0 to 14, where 0 is the most acidic and 14 is the most basic</option>
+      <option>3.  Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
+      <option>4.  Copper - sliding scale of 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</option>
+      <option>5.  Nitrate - (0, 2, 10, 20, 50)</option>
+      <option>6.  Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</option>
+      <option>7.  Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
+      <option>8.  Hardness - (0, 50, 120, 250, 425, 1000)</option>
+      <option>9.  Coliform bacteria present? y/n</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
         
         
         
@@ -217,6 +229,13 @@
         
         
         {{! working code examples for layout...}}
+
+
+
+      {{!-- <label for="customRange3">pH scale</label>
+<input type="range" class="custom-range" min="0" max="14" step="0" id="customRange3"> --}}
+
+
         <div class="invalid-feedback">
           Please enter your shipping address.
         </div>
