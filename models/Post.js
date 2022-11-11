@@ -37,16 +37,17 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    movingOrStill: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      comments: "",
+    },
 
     // distance: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
-    // movingOrStill: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: true,
-    //   comments: "",
-    // },
+
     // source: {
     //   type: DataTypes.STRING,
     //   allowNull: true,
