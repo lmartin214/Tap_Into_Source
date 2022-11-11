@@ -9,10 +9,19 @@ router.get("/", (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
-// get one product
-router.get("/:id", (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+// get posts by zip
+router.get("/:zip", async (req, res) => {
+  try {
+    const postZip = await User.findAll(req.params.zip);
+    if (!userData) {
+      res.status(404).json({ message: "No posts with this zip code!" });
+      return;
+    }
+    console.log(postZip);
+    res.status(200).json(postZip);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // create new product
