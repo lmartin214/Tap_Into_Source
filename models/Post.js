@@ -19,64 +19,78 @@ Post.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false,
+      comments: "",
     },
     distance: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    tested: {
+    movingOrStill: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
+      comments: "",
     },
-    // isMoving: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    // },
-    // isStill: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    // },
     source: {
       type: DataTypes.STRING,
       allowNull: true,
+      comments: "",
+    },
+    tested: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      comments: "",
     },
     drinkable: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
+      comments: "",
     },
     visibility: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      comments: "",
     },
-    // depth: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    // },
+    depth: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      comments: "",
+    },
     swimmable: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
+      comments: "",
     },
     accessibility: {
       type: DataTypes.STRING,
       allowNull: false,
+      comments: "",
     },
     isHike: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
+      comments: "",
     },
     isDrive: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
+      comments: "",
     },
     parking: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      comments: "",
     },
     dogs: {
       type: DataTypes.STRING,
       allowNull: true,
+      comments: "",
+    },
+    additionalComments: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
+
   {
     sequelize,
     timestamps: false,
