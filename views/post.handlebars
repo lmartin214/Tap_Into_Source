@@ -14,8 +14,9 @@
     <h4 class="mb-3">Follow the Prompts</h4>
           <div class="row">
         <div class="col-md-5 mb-3">
-          <label for="country">What Type of Water Source?</label>
-          <select class="custom-select d-block w-100" id="country" required="">
+        <form id="post-form">
+         <label>What Type of Water Source?</label>
+          <select class="custom-select d-block w-100" id="type" required="">
             <option value="">Choose...</option>
             <option>Waterfall</option>
             <option>Lake</option>
@@ -101,7 +102,7 @@
           </div>
         </div>
         <div class="col-md-3 mb-3">
-          <label for="zip">Zip</label>
+          <label>Zip</label>
           <input
             type="text"
             class="form-control"
@@ -127,8 +128,22 @@
           Please enter your shipping address.
         </div>
       </div>
-      {{!-- stop --}}
-    <form class="needs-validation" novalidate="">
+            <hr class="mb-4" />
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to
+        checkout</button>
+    </form>
+  </div>
+</div>
+<script src = "/js/post.js"> </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    {{!-- <form class="needs-validation" novalidate="">
       <div class="row">
         <div class="col-md-6 mb-3">
           <label for="firstName">First name</label>
@@ -284,10 +299,4 @@
             Security code required
           </div>
         </div>
-      </div>
-      <hr class="mb-4" />
-      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to
-        checkout</button>
-    </form>
-  </div>
-</div>
+      </div> --}}
