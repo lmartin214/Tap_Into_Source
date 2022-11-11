@@ -220,7 +220,6 @@
 </form> {{! is this tag needed??? }}
 
 {{! Accessibility}}
-        
 <h4 class="col-md-4 mb-3">
   <label for="state">Accessibility</label>
   <select class="custom-select d-block w-100" id="accessibility" required="">
@@ -229,6 +228,18 @@
     <option>I hiked in!</option>
     <option>I drove right up!</option>
     <option>I did some hiking AND some driving</option>
+  </select>
+</div>
+
+{{! Trail Difficulty}}
+<h4 class="col-md-4 mb-3">
+  <label for="difficulty">Trail Difficulty</label>
+  <select class="custom-select d-block w-100" id="trailDifficulty" required="">
+</h4>
+  <option value="">If applicable...</option>
+    <option>easy</option>
+    <option>moderate</option>
+    <option>hard</option>
   </select>
 </div>
         

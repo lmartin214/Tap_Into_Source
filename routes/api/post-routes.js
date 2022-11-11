@@ -38,8 +38,9 @@ router.post("/", async (req, res) => {
       movingOrStill: req.body.movingOrStill,
       waterSource: req.body.waterSource,
       tests: req.body.tests,
-      whichTests: req.body.tests,
-      accessibility: req.body.tests,
+      whichTests: req.body.whichTests,
+      accessibility: req.body.accessibility,
+      trailDifficulty: req.body.trailDifficulty,
     });
     console.log("new post");
     res.json(newPost);

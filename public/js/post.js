@@ -10,6 +10,7 @@ const postForm = async function (event) {
   const tests = document.querySelector("#tests");
   const whichTests = document.querySelector("#whichTests");
   const accessibility = document.querySelector("#accessibility");
+  const trailDifficulty = document.querySelector("#trailDifficulty");
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -23,6 +24,7 @@ const postForm = async function (event) {
       tests: tests.value,
       whichTests: whichTests.value,
       accessibility: accessibility.value,
+      trailDifficulty: trailDifficulty.value,
     }),
     headers: {
       "Content-Type": "application/json",
