@@ -39,12 +39,17 @@ Post.init(
     },
     movingOrStill: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       comments: "",
     },
     waterSource: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      comments: "",
+    },
+    tested: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
       comments: "",
     },
 

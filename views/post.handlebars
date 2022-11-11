@@ -125,7 +125,7 @@
           required=""
         />
      {{! Moving or Still? }}   
-    <div class="mb-3">Moving or Still Water?
+    <h4 class="mb-3">Moving or Still Water?</h4>
 
       <div class="d-block my-3">
         <div class="custom-control custom-radio">
@@ -145,52 +145,67 @@
             name="water"
             type="radio"
             class="custom-control-input"
-            {{!-- checked="" --}}
             required=""
           />
           <label class="custom-control-label" for="still">Still Water</label>
         </div>
       </div>
-
-      <div class="mb-3">Water Source
+    
+{{!-- starts here --}}
+<h4 class="mb-3">Water Source</h4>
 
       <div class="d-block my-3">
         <div class="custom-control custom-radio">
           <input
-            id="rainWater"
+            id="rainwater"
             name="source"
             type="radio"
             class="custom-control-input"
             checked=""
             required=""
           />
-          <label class="custom-control-label" for="moving">Rain Water</label>
+          <label class="custom-control-label" for="rainwater">Rain Water</label>
         </div>
         <div class="custom-control custom-radio">
           <input
-            id="snowWater"
+            id="snowwater"
             name="source"
             type="radio"
             class="custom-control-input"
-            checked=""
             required=""
           />
-          <label class="custom-control-label" for="still">Snow Water</label>
+          <label class="custom-control-label" for="snowwater">Snow Water</label>
         </div>
         <div class="custom-control custom-radio">
           <input
-            id="groundWater"
+            id="groundwater"
             name="source"
             type="radio"
             class="custom-control-input"
-            checked=""
             required=""
           />
-          <label class="custom-control-label" for="ground">Ground Water</label>
+          <label class="custom-control-label" for="groundwater">Ground Water</label>
         </div>
       </div>
-        
-        
+    
+
+
+      {{!-- {{! tested? }}
+          <div class="mb-3">Did you test the water?
+
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input
+            id="moving"
+            name="water"
+            type="radio"
+            class="custom-control-input"
+            checked=""
+            required=""
+          />
+          <label class="custom-control-label" for="moving">Moving Water</label>
+        </div>
+         --}}
         
         
         
@@ -286,7 +301,7 @@
       </div>
       <hr class="mb-4" />
 
-      <h4 class="mb-3">Payment</h4>
+      {{!-- <h4 class="mb-3">Payment</h4>
 
       <div class="d-block my-3">
         <div class="custom-control custom-radio">
@@ -330,7 +345,7 @@
             id="cc-name"
             placeholder=""
             required=""
-          />
+          /> --}}
           <small class="text-muted">Full name as displayed on card</small>
           <div class="invalid-feedback">
             Name on card is required
