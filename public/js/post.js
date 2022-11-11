@@ -6,6 +6,7 @@ const postForm = async function (event) {
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
   const movingOrStill = document.querySelector("#movingOrStill");
+  const waterSource = document.querySelector("#waterSource");
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -15,6 +16,7 @@ const postForm = async function (event) {
       zip: zip.value,
       state: state.value,
       movingOrStill: movingOrStill.value,
+      waterSource: waterSource.value,
     }),
     headers: {
       "Content-Type": "application/json",

@@ -42,17 +42,17 @@ Post.init(
       allowNull: true,
       comments: "",
     },
+    waterSource: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      comments: "",
+    },
 
     // distance: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
     // },
 
-    // source: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   comments: "",
-    // },
     // tested: {
     //   type: DataTypes.BOOLEAN,
     //   allowNull: false,

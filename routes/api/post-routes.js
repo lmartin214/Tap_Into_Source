@@ -36,6 +36,7 @@ router.post("/", async (req, res) => {
       zip: req.body.zip,
       state: req.body.state,
       movingOrStill: req.body.movingOrStill,
+      waterSource: req.body.waterSource,
     });
     console.log("new post");
     res.json(newPost);
