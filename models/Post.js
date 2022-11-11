@@ -33,7 +33,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    address: {
+    closestAddress: {
       type: DataTypes.STRING,
       allowNull: false,
     },

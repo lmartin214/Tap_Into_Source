@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
   try {
     const newPost = await Post.create({
       type: req.body.type,
-      country: req.body.type,
+      country: req.body.country,
       zip: req.body.zip,
       state: req.body.state,
       closestAddress: req.body.closestAddress,
