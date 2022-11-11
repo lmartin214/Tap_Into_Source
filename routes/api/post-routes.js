@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 router.get("/:zip", async (req, res) => {
   try {
     const postZip = await User.findAll(req.params.zip);
-    if (!userData) {
+    if (!postData) {
       res.status(404).json({ message: "No posts with this zip code!" });
       return;
     }
@@ -24,7 +24,7 @@ router.get("/:zip", async (req, res) => {
   }
 });
 
-// create new product
+// create new post
 router.post("/", async (req, res) => {
   console.log("in the route");
   try {

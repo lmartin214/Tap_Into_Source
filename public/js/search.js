@@ -2,23 +2,13 @@ const searchPosts = async function (event) {
   event.preventDefault();
   console.log("hello hello!");
   const input = document.querySelector("#zipcode-input-search");
+  console.log(input.value);
 
-  const response = await fetch("/api/posts", {
-    method: "POST",
-    body: JSON.stringify({
-      type: type.value,
-      zip: zip.value,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  if (response.ok) {
-    console.log("Posted!");
-    // redirect to whichever page you want to after you sign up //
-  } else {
-    alert("failed to post");
-  }
+  await fetch("/api/posts", {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 };
 
-document.querySelector("#post-form").addEventListener("submit", postForm);
+document.querySelector("#search-form").addEventListener("submit", searchPosts);

@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. change false to true when you want to recreate db but lose data
-sequelize.sync({ force: true }).then(function () {
+sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   });
