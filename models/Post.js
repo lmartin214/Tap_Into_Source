@@ -20,13 +20,17 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    zip: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "post",
+    modelName: "Post",
   }
 );
 
