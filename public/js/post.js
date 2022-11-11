@@ -9,6 +9,7 @@ const postForm = async function (event) {
   const waterSource = document.querySelector("#waterSource");
   const tests = document.querySelector("#tests");
   const whichTests = document.querySelector("#whichTests");
+  const accessibility = document.querySelector("#accessibility");
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -21,6 +22,7 @@ const postForm = async function (event) {
       waterSource: waterSource.value,
       tests: tests.value,
       whichTests: whichTests.value,
+      accessibility: accessibility.value,
     }),
     headers: {
       "Content-Type": "application/json",
