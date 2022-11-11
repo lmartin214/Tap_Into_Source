@@ -33,6 +33,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
 
     // distance: {
     //   type: DataTypes.STRING,

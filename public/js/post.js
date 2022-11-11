@@ -5,6 +5,7 @@ const postForm = async function (event) {
   const country = document.querySelector("#country");
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
+  const closestAddress = document.querySelector("#closestAddress");
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -13,6 +14,7 @@ const postForm = async function (event) {
       country: country.value,
       zip: zip.value,
       state: state.value,
+      closestAddress: closestAddress.value,
     }),
     headers: {
       "Content-Type": "application/json",

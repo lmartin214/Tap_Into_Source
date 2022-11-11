@@ -35,6 +35,7 @@ router.post("/", async (req, res) => {
       country: req.body.type,
       zip: req.body.zip,
       state: req.body.state,
+      closestAddress: req.body.closestAddress,
     });
     console.log("new post");
     res.json(newPost);
