@@ -37,6 +37,8 @@ router.post("/", async (req, res) => {
       state: req.body.state,
       movingOrStill: req.body.movingOrStill,
       waterSource: req.body.waterSource,
+      tests: req.body.tests,
+      whichTests: req.body.tests,
     });
     console.log("new post");
     res.json(newPost);

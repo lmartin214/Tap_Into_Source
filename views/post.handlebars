@@ -189,11 +189,7 @@
       </div>
     
 {{! Water Testing }}
-
-
-{{! if yes,...}}
-<h4 class="form-group">
-    <label for="exampleFormControlSelect2">Did you test the water?</label>
+<h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label>
 </h4>
 
 <div class="form-check form-check-inline">
@@ -205,22 +201,23 @@
   <label class="form-check-label" for="inlineCheckbox2">no</label>
 </div>
     <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1.  Lead - positive (>15ppb) / negative (<15ppb)</option>
-      <option>2.  pH levels - 0 to 14, most acidic to most basic</option>
-      <option>3.  Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
-      <option>4.  Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</option>
-      <option>5.  Nitrate - (0, 2, 10, 20, 50)</option>
-      <option>6.  Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</option>
-      <option>7.  Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
-      <option>8.  Hardness - (0, 50, 120, 250, 425, 1000)</option>
-      <option>9.  Coliform bacteria present? y/n</option>
+      <option>1.   Lead - positive (>15ppb) / negative (<15ppb)</option>
+      <option>2.   pH levels - 0 to 14, most acidic to most basic</option>
+      <option>3.   Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
+      <option>4.   Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</option>
+      <option>5.   Nitrate - (0, 2, 10, 20, 50)</option>
+      <option>6.   Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</option>
+      <option>7.   Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
+      <option>8.   Hardness - (0, 50, 120, 250, 425, 1000)</option>
+      <option>9.   Coliform bacteria present? y/n</option>
     </select>
   </div>
-  <h5 class="form-group">
+{{! Which tests were done? What were the results?}}
+  <h4 class="form-group">
     <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </h5>
-</form>
+  </h4>
+</form> {{! is this tag needed??? }}
         
         
         

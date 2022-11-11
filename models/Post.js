@@ -52,7 +52,7 @@ Post.init(
       allowNull: false,
       comments: "",
     },
-    whatTests: {
+    whichTests: {
       type: DataTypes.STRING,
       allowNull: true,
       comments: "",
