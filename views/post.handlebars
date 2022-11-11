@@ -125,13 +125,13 @@
           required=""
         />
      {{! Moving or Still? }}   
-    <div class="mb-3">Moving or Still Water?>
+    <div class="mb-3">Moving or Still Water?
 
       <div class="d-block my-3">
         <div class="custom-control custom-radio">
           <input
             id="moving"
-            name="movingWater"
+            name="water"
             type="radio"
             class="custom-control-input"
             checked=""
@@ -142,9 +142,10 @@
         <div class="custom-control custom-radio">
           <input
             id="still"
-            name="stillWater"
+            name="water"
             type="radio"
             class="custom-control-input"
+            {{!-- checked="" --}}
             required=""
           />
           <label class="custom-control-label" for="still">Still Water</label>

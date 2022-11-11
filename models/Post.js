@@ -38,8 +38,8 @@ Post.init(
       allowNull: false,
     },
     movingOrStill: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: true,
       comments: "",
     },
 
