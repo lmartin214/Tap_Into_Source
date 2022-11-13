@@ -2,6 +2,7 @@ const router = require('express').Router()
 const {
     User, Post
 } = require('../models/')
+const withAuth = require('../utils/auth')
 
 router.get('/',(req,res)=>{
 res.render('home',{
@@ -9,7 +10,7 @@ res.render('home',{
 })
 })
 
-router.get('/profile',(req,res)=>{
+router.get('/profile', withAuth ,(req,res)=>{
     res.render('profile',{
         layout:'main'
     })
