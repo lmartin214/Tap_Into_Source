@@ -17,7 +17,13 @@ document.querySelector("#search-form").addEventListener("submit", searchPosts);
 const buttons = document.querySelectorAll(".water");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
+    // button.disabled = true;
     type = event.target.innerHTML;
     console.log("type", type);
   });
+});
+
+$(".btn").on("click", function () {
+  $(this).siblings(".water").removeClass("active");
+  $(this).addClass("active");
 });
