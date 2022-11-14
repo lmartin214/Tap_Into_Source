@@ -151,19 +151,18 @@
           required=""
         />
      {{! Moving or Still? }}   
-    <h4 class="mb-3">Moving or Still Water?</h4>
-
-    <div class="form-check form-check-inline">
+<h4 class="mb-3">Moving or Still Water?</h4>
+<div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">moving water</label>
+  <label class="form-check-label" for="inlineCheckbox1">Moving Water</label>
 </div>
 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <label class="form-check-label" for="inlineCheckbox1">still water</label>
+  <label class="form-check-label" for="inlineCheckbox1">Still Water</label>
 </div>
 
-      <div class="d-block my-3">
+      {{!-- <div class="d-block my-3">
         <div class="custom-control custom-checkbox">
           <input
             id="moving"
@@ -187,18 +186,37 @@
             required=""
           />
           <label class="custom-control-label" for="still">Still Water</label>
-        </div>
-      </div>
+        </div> --}}
+      {{!-- </div> --}}
     
-{{!-- starts here --}}
+{{!-- Water Type --}}
 <h4 class="mb-3">Water Type</h4>
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Rain Water</label>
+</div>
+
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox1">Snow Water</label>
+</div>
+
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox1">Ground Water</label>
+</div>
+
+
+
+
+{{!-- <h4 class="mb-3">Water Type</h4>
 
       <div class="d-block my-3">
         <div class="custom-control custom-checkbox">
           <input
             id="rainwater"
             name="source"
-            type="radio"
+            type="checkbox"
             class="form-check-input"
             checked=""
             required=""
@@ -209,7 +227,7 @@
           <input
             id="snowwater"
             name="source"
-            type="radio"
+            type="checkbox"
             class="form-check-input"
             required=""
           />
@@ -220,13 +238,13 @@
           <input
             id="groundwater"
             name="source"
-            type="radio"
+            type="checkbox"
             class="form-check-input"
             required=""
           />
           <label class="custom-control-label" for="groundwater">Ground Water</label>
         </div>
-      </div>
+      </div> --}}
     
 {{! Water Testing }}
 <h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label>
@@ -234,19 +252,50 @@
 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">2. pH levels - 0 to 14, most acidic to most basic</a>
-  <label class="form-check-label" for="inlineCheckbox1">yes</label>
+ <a href="#" class="list-group-item list-group-item-action list-group-item-primary">1. Lead - positive (>15ppb) / negative (<15ppb)</a>
+  <label class="form-check-label" for="inlineCheckbox1"></label>
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-  <a href="#" class="list-group-item list-group-item-action list-group-item-success">3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</a>
-  <label class="form-check-label" for="inlineCheckbox1">yes</label>
+<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">2. pH levels - 0 to 14, most acidic to most basic</a>
+  <label class="form-check-label" for="inlineCheckbox1"></label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-  <label class="form-check-label" for="inlineCheckbox2">no</label>
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
 </div>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">4. Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">5. Nitrate - (0, 2, 10, 20, 50)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info">6. Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-light">7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option8">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">8. Hardness - (0, 50, 120, 250, 425, 1000)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option9">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-purple">9. Coliform bacteria present? y/n</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+    {{!-- <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>1. Lead - positive (>15ppb) / negative (<15ppb)</option>
       <option>2. pH levels - 0 to 14, most acidic to most basic</option>
       <option>3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
@@ -256,10 +305,10 @@
       <option>7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
       <option>8. Hardness - (0, 50, 120, 250, 425, 1000)</option>
       <option>9. Coliform bacteria present? y/n</option>
-    </select>
-  </div>
+    </select> --}}
+  {{!-- </div> --}}
 {{! Test 2.0}}
-<div class="list-group">
+{{!-- <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
 
 
@@ -272,7 +321,7 @@
   <a href="#" class="list-group-item list-group-item-action list-group-item-light">7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-dark">8. Hardness - (0, 50, 120, 250, 425, 1000)</a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-purple">9. Coliform bacteria present? y/n</a>
-</div>
+</div> --}}
 
 
 {{! Which tests were done? What were the results?}}
