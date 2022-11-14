@@ -201,17 +201,34 @@
   <label class="form-check-label" for="inlineCheckbox2">no</label>
 </div>
     <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1.   Lead - positive (>15ppb) / negative (<15ppb)</option>
-      <option>2.   pH levels - 0 to 14, most acidic to most basic</option>
-      <option>3.   Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
-      <option>4.   Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</option>
-      <option>5.   Nitrate - (0, 2, 10, 20, 50)</option>
-      <option>6.   Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</option>
-      <option>7.   Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
-      <option>8.   Hardness - (0, 50, 120, 250, 425, 1000)</option>
-      <option>9.   Coliform bacteria present? y/n</option>
+      <option>1. Lead - positive (>15ppb) / negative (<15ppb)</option>
+      <option>2. pH levels - 0 to 14, most acidic to most basic</option>
+      <option>3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</option>
+      <option>4. Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</option>
+      <option>5. Nitrate - (0, 2, 10, 20, 50)</option>
+      <option>6. Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</option>
+      <option>7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</option>
+      <option>8. Hardness - (0, 50, 120, 250, 425, 1000)</option>
+      <option>9. Coliform bacteria present? y/n</option>
     </select>
   </div>
+{{! Test 2.0}}
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+
+
+  <a href="#" class="list-group-item list-group-item-action list-group-item-primary">1. Lead - positive (>15ppb) / negative (<15ppb)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">2. pH levels - 0 to 14, most acidic to most basic</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">4. Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">5. Nitrate - (0, 2, 10, 20, 50)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info">6. Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-light">7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">8. Hardness - (0, 50, 120, 250, 425, 1000)</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-purple">8. Hardness - (0, 50, 120, 250, 425, 1000)</a>
+</div>
+
+
 {{! Which tests were done? What were the results?}}
   <h4 class="form-group">
     <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
@@ -242,9 +259,20 @@
     <option>hard</option>
   </select>
 </div>
+
+{{! Parking }}
+<div class="form-outline w-25 mb-4">
+  <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
+  <textarea class="form-control" id="parking" rows="3"></textarea>
+</div>
         
-        
-        
+{{! Depth }}  
+<div class="form-outline w-25 mb-4">
+      <h4>Depth</h4>
+      <h6> ex: 35" or I'm 5'4 and the water was waist level on me</h6>
+      <h5>Swimmable?</h5>
+      <textarea class="form-control" id="depth" rows="3"></textarea>
+</div>
         
         
         

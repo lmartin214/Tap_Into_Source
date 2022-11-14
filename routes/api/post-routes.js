@@ -41,6 +41,7 @@ router.post("/", async (req, res) => {
       whichTests: req.body.whichTests,
       accessibility: req.body.accessibility,
       trailDifficulty: req.body.trailDifficulty,
+      parking: req.body.parking,
     });
     console.log("new post");
     res.json(newPost);
