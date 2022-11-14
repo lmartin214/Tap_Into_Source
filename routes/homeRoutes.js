@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const router = require('express').Router()
 const {
     User, Post
@@ -16,16 +15,6 @@ router.get('/profile', withAuth ,(req,res)=>{
         layout:'main'
     })
     })
-=======
-const router = require("express").Router();
-const { User, Post } = require("../models/");
-
-router.get("/", (req, res) => {
-  res.render("home", {
-    layout: "main",
-  });
-});
->>>>>>> main
 
 router.get('/signup',(req,res)=>{
     if (req.session.loggedIn){
@@ -45,9 +34,6 @@ router.get("/post", (req, res) => {
   });
 });
 
-<<<<<<< HEAD
-module.exports = router
-=======
 router.get("/search", (req, res) => {
   res.render("search", {
     layout: "main",
@@ -55,4 +41,3 @@ router.get("/search", (req, res) => {
 });
 
 module.exports = router;
->>>>>>> main
