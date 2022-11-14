@@ -36,14 +36,15 @@ router.post("/", async (req, res) => {
       zip: req.body.zip,
       state: req.body.state,
       movingOrStill: req.body.movingOrStill,
-      waterSource: req.body.waterSource,
-      tests: req.body.tests,
-      whichTests: req.body.whichTests,
+      // waterSource: req.body.waterSource,
+      // tests: req.body.tests,
+      // whichTests: req.body.whichTests,
+      // ************************* //
       accessibility: req.body.accessibility,
-      trailDifficulty: req.body.trailDifficulty,
-      parking: req.body.parking,
-      depth: req.body.depth,
-      dogs: req.body.depth,
+      // trailDifficulty: req.body.trailDifficulty,
+      // parking: req.body.parking,
+      // depth: req.body.depth,
+      // dogs: req.body.depth,
       // rating: req.body.rating,
     });
     console.log("new post");

@@ -19,7 +19,7 @@ Post.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false,
-      comments: "",
+      // comments: "",
     },
     zip: {
       type: DataTypes.INTEGER,
@@ -33,55 +33,51 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    closestAddress: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     movingOrStill: {
       type: DataTypes.STRING,
       allowNull: false,
       comments: "",
     },
-    waterSource: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      comments: "",
-    },
-    tests: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      comments: "",
-    },
-    whichTests: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      comments: "",
-    },
+    // waterSource: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   comments: "",
+    // },
+    // tests: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    //   comments: "",
+    // },
+    // whichTests: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    //   comments: "",
+    // },
+    // ************************** //
     accessibility: {
       type: DataTypes.STRING,
       allowNull: false,
-      comments: "",
     },
-    trailDifficulty: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      comments: "",
-    },
-    parking: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      comments: "",
-    },
-    depth: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      comments: "",
-    },
-    rating: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      comments: "",
-    },
+    // trailDifficulty: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    //   comments: "",
+    // },
+    // parking: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    //   comments: "",
+    // },
+    // depth: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   comments: "",
+    // },
+    // rating: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   comments: "",
+    // },
     // if yes, which tests have you done? what were the results? 10) does not apply instead of boolean
     // testsDone: {
     //   type: DataTypes.STRING,
