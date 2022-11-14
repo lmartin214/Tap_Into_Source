@@ -5,7 +5,7 @@ const withAuth = require('../../utils/auth')
 // The `/api/users` endpoint
 
 
-router.post('/', withAuth , async (req, res) => {
+router.post('/' , async (req, res) => {
 
 try{
 const newUser = await User.create({
@@ -23,12 +23,83 @@ res.status(500).json(err)
 }
 });
 
-router.put('/:id', withAuth, async (req, res) => {
-  // update a category by its `id` value
+router.get(':id',(req, res) => {
+  User.findOne({
+    attributes:{exclude:['password']},
+    where:{
+    id:req.params.id
+  }
+  })
+.then(dbUserData => {
+  if (!dbUserData) {
+    res.status(404).json({message: 'No user found with this id'});
+    return;
+  }
+  res.json(dbUserData);
+})
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
+});
+
+router.put('/:id', (req, res) => {
+    (req.body,{
+    individualHooks: true,
+    where: {
+      id:req.params.id
+    }
+  })
+  .then(dbUserData => {
+    if(dbUserData[0]) {
+      res.status(404).json({message: 'No user found with this id'});
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+  User.destroy({
+    where:{
+      id:req.params.id
+    }
+  })
+  .then(dbUserData => {
+    if(dbUserData) {
+      res.status(404).json({message:'No user found with this id'});
+      return;
+    }
+    res.json(dbUserData);
+  })
+  .catch(err =>{
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
+
+router.post('/login', (req, res) => {
+  User.findOne({
+      where: {
+      email: req.body.username
+    }
+
+  }).then(dbUserData => {
+    if (!dbUserData) {
+      res.status(400).json({ message: 'No user with that email name!' });
+      return;
+    }
+
+    const validPassword = dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password!' });
+    }
+  })
+}),      
 
 module.exports = router;
