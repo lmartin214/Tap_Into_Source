@@ -42,6 +42,9 @@ router.post("/", async (req, res) => {
       accessibility: req.body.accessibility,
       trailDifficulty: req.body.trailDifficulty,
       parking: req.body.parking,
+      depth: req.body.depth,
+      dogs: req.body.depth,
+      // rating: req.body.rating,
     });
     console.log("new post");
     res.json(newPost);
@@ -49,6 +52,11 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Starfish Rating
+// const rating = document.getElementById("rating1");
+// const rating1 = new CDB.Rating(rating);
+// rating1.getRating;
 
 //   Product.create(req.body)
 //     .then((product) => {

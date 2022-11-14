@@ -12,6 +12,9 @@ const postForm = async function (event) {
   const accessibility = document.querySelector("#accessibility");
   const trailDifficulty = document.querySelector("#trailDifficulty");
   const parking = document.querySelector("#parking");
+  const depth = document.querySelector("#depth");
+  const dogs = document.querySelector("#dogs");
+  // const rating = document.querySelector("rating");
 
   const response = await fetch("/api/posts", {
     method: "POST",
@@ -27,6 +30,9 @@ const postForm = async function (event) {
       accessibility: accessibility.value,
       trailDifficulty: trailDifficulty.value,
       parking: parking.value,
+      depth: depth.value,
+      dogs: dogs.value,
+      // rating: rating.value,
     }),
     headers: {
       "Content-Type": "application/json",
