@@ -5,21 +5,30 @@ const { Post, User } = require("../../models");
 
 // get all products
 router.get("/", (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  try {
+    Post.findAll().then((data) => res.json(data));
+  } catch (err) {
+    console.log(err.message);
+  }
 });
 
 // get posts by zip
 router.get("/:zip", async (req, res) => {
+  console.log("in the route2");
   try {
-    const postZip = await User.findAll(req.params.zip);
-    if (!postData) {
-      res.status(404).json({ message: "No posts with this zip code!" });
-      return;
-    }
-    console.log(postZip);
-    res.status(200).json(postZip);
+    // const postZip =  await Post.findAll({
+    Post.findAll({
+      where: { zip: req.params.zip },
+    }).then((data) => {
+      res.json(data);
+      console.log(data);
+    });
+    // if (!postZip) {
+    //   res.status(404).json({ message: "No posts with this zip code!" });
+    // }
+    // res.status(200).json(postZip);
   } catch (err) {
+    console.log(err.message);
     res.status(500).json(err);
   }
 });
