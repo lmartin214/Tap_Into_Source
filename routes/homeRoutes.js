@@ -2,12 +2,19 @@ const router = require('express').Router()
 const {
     User, Post
 } = require('../models/')
+const withAuth = require('../utils/auth')
 
 router.get('/',(req,res)=>{
 res.render('home',{
     layout:'main'
 })
 })
+
+router.get('/profile', withAuth ,(req,res)=>{
+    res.render('profile',{
+        layout:'main'
+    })
+    })
 
 router.get('/signup',(req,res)=>{
     if (req.session.loggedIn){
@@ -21,10 +28,16 @@ router.get('/signup',(req,res)=>{
     })
 })
 
+router.get("/post", (req, res) => {
+  res.render("post", {
+    layout: "main",
+  });
+});
 
+router.get("/search", (req, res) => {
+  res.render("search", {
+    layout: "main",
+  });
+});
 
-
-
-
-
-module.exports = router
+module.exports = router;

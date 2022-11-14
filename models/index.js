@@ -1,9 +1,9 @@
 // import models
-const Post = require('./Post');
-const User = require('./User');
+const Post = require("./Post");
+const User = require("./User");
 
 // Products belongsTo Category
-User.hasMany(Post)
+User.hasMany(Post);
 // Categories have many Products
 
 // Products belongToMany Tags (through ProductTag)
@@ -13,5 +13,4 @@ User.hasMany(Post)
 module.exports = {
   Post,
   User,
-  
 };
