@@ -13,33 +13,40 @@ router.get("/", (req, res) => {
 });
 
 // get posts by type
-router.get("/type/:type", (req, res) => {
-  console.log(req.params);
-  try {
-    Post.findAll({
-      where: { type: req.params.type },
-    }).then((data) => {
-      if (!data.length) {
-        res.status(404).json({ message: "No posts with this water type!" });
-      } else {
-        res.status(200).json(data);
-      }
-    });
-  } catch (err) {
-    console.log(err.message);
-    res.status(500).json(err);
-  }
-});
+// router.get("/type/:type", (req, res) => {
+//   console.log(req.params);
+//   try {
+//     Post.findAll({
+//       where: { type: req.params.type },
+//     }).then((data) => {
+//       if (!data.length) {
+//         res.status(404).json({ message: "No posts with this water!" });
+//       } else {
+//         res.status(200).json(data);
+//       }
+//     });
+//   } catch (err) {
+//     console.log(err.message);
+//     res.status(500).json(err);
+//   }
+// });
 
 // get posts by zip
-router.get("/zip/:zip", (req, res) => {
-  console.log(req.params);
+router.get("/search/:zip/:type?", (req, res) => {
+  const { params } = req;
+  Object.keys(params).forEach((key) => {
+    if (params[key] === undefined) {
+      delete params[key];
+    }
+  });
+  console.log("params", params);
+
   try {
     Post.findAll({
-      where: { zip: req.params.zip },
+      where: params,
     }).then((data) => {
       if (!data.length) {
-        res.status(404).json({ message: "No posts with this zip code!" });
+        res.status(404).json({ message: "No posts with these!" });
       } else {
         res.status(200).json(data);
       }
