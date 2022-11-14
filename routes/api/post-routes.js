@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+const { Post } = require("../../models");
 
 // The `/api/products` endpoint
 
-// get all products
+// get all posts
 router.get("/", (req, res) => {
   try {
     Post.findAll().then((data) => res.json(data));
@@ -12,21 +12,38 @@ router.get("/", (req, res) => {
   }
 });
 
-// get posts by zip
-router.get("/:zip", async (req, res) => {
-  console.log("in the route2");
+// get posts by type
+router.get("/type/:type", (req, res) => {
+  console.log(req.params);
   try {
-    // const postZip =  await Post.findAll({
+    Post.findAll({
+      where: { type: req.params.type },
+    }).then((data) => {
+      if (!data.length) {
+        res.status(404).json({ message: "No posts with this water type!" });
+      } else {
+        res.status(200).json(data);
+      }
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).json(err);
+  }
+});
+
+// get posts by zip
+router.get("/zip/:zip", (req, res) => {
+  console.log(req.params);
+  try {
     Post.findAll({
       where: { zip: req.params.zip },
     }).then((data) => {
-      res.json(data);
-      console.log(data);
+      if (!data.length) {
+        res.status(404).json({ message: "No posts with this zip code!" });
+      } else {
+        res.status(200).json(data);
+      }
     });
-    // if (!postZip) {
-    //   res.status(404).json({ message: "No posts with this zip code!" });
-    // }
-    // res.status(200).json(postZip);
   } catch (err) {
     console.log(err.message);
     res.status(500).json(err);

@@ -6,13 +6,10 @@ const searchPosts = async function (event) {
   const input = document.querySelector("#zipcode-input-search");
   console.log(input.value);
 
-  fetch("/api/posts/:zip", {
+  fetch(`/api/posts/zip/${input.value}`, {
     method: "GET",
-    params: JSON.stringify({
-      zip: input,
-    }),
   })
-    // .then((res) => res.json())
+    .then((res) => res.json())
     .then((data) => console.log(data));
 };
 
