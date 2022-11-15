@@ -84,3 +84,330 @@ header {
   -webkit-text-stroke: 1px #f8f8f8;
   text-shadow: 0px 2px 4px#4eb5f1;
 }
+
+/* login.css */
+.register-photo {
+  background:#f1f7fc;
+  padding:80px 0;
+}
+
+.register-photo .image-holder {
+  display:table-cell;
+  width:auto;
+  background:url(sign_up_photo.jpeg);
+  background-size:cover;
+}
+
+.register-photo .form-container {
+  display:table;
+  max-width:900px;
+  width:90%;
+  margin:0 auto;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+}
+
+/* maps.css */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 45%;
+  /* The width is the width of the web page */
+}
+
+/* profile.css */
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%;
+  width: 160px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 30; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* search1.css */
+@media (min-width: 992px)
+.px-lg-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text-white {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #000000;
+    --bs-primary: #2a5555;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #000000;
+    --bs-primary-rgb: 42, 85, 85;
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success-rgb: 25, 135, 84;
+    --bs-info-rgb: 13, 202, 240;
+    --bs-warning-rgb: 255, 193, 7;
+    --bs-danger-rgb: 220, 53, 69;
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark-rgb: 0, 0, 0;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-black-rgb: 0, 0, 0;
+    --bs-body-color-rgb: 0, 0, 0;
+    --bs-body-bg-rgb: 255, 255, 255;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: DM Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #000000;
+Show All Properties (1 more)
+}
+<style>
+:host, :root {
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+    --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+    --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+    --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    position: relative;
+  }
+  body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  video.bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 0;
+  }
+.masthead {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .masthead:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .masthead .masthead-content {
+    position: relative;
+    max-width: 40rem;
+  }
+  .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+    font-size: 2.5rem;
+  }
+  .masthead .masthead-content p {
+    font-size: 1.2rem;
+  }
+  .masthead .masthead-content p strong {
+    font-weight: 700;
+  }
+  .masthead .masthead-content .input-group-newsletter input {
+    height: auto;
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .masthead .masthead-content .input-group-newsletter button {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: calc(1rem + 2px);
+  }
+  
+  @media (min-width: 992px) {
+    .masthead {
+      height: 100%;
+      min-height: 0;
+      padding-bottom: 0;
+    }
+    .masthead:before {
+      transform: skewX(-9deg);
+      transform-origin: top right;
+    }
+    .masthead .masthead-content {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 2rem;
+      padding-right: 9rem;
+    }
+    .masthead .masthead-content h1, .masthead .masthead-content .h1 {
+      font-size: 3.5rem;
+    }
+    .masthead .masthead-content p {
+      font-size: 1.3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .masthead {
+      width: 65vw;
+    }
+  }
+
+  /* signup.css */
+  .register-photo {
+    background:#f1f7fc;
+    padding:80px 0;
+  }
+  
+  .register-photo .image-holder {
+    display:table-cell;
+    width:auto;
+    background:url(hands.jpeg);
+    background-size:cover;
+  }
+  
+  .register-photo .form-container {
+    display:table;
+    max-width:900px;
+    width:90%;
+    margin:0 auto;
+    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+  }
