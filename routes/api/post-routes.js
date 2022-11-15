@@ -25,7 +25,7 @@ router.get("/:zip", async (req, res) => {
   }
 });
 
-// create new post 
+// create new post
 router.post("/", async (req, res) => {
   console.log("in the route");
   try {
@@ -36,11 +36,11 @@ router.post("/", async (req, res) => {
       state: req.body.state,
       whichTests: req.body.whichTests,
       accessibility: req.body.accessibility,
-      footTraffic: req.body.accessibility,
+      footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
       parking: req.body.parking,
       depth: req.body.depth,
-      dogs: req.body.depth,
+      dogs: req.body.dogs,
     });
     console.log("new post");
     res.json(newPost);
