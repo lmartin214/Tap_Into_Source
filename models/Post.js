@@ -42,7 +42,7 @@ Post.init(
     },
     trailDifficulty: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     // footTraffic: {
     //   type: DataTypes.STRING,
