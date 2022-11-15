@@ -52,7 +52,8 @@ router.get("/post", (req, res) => {
 
 router.get("/search", (req, res) => {
   res.render("search", {
-    layout: "home",
+    layout: "search",
+    style: "search.css"
   });
 });
 
