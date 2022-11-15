@@ -38,11 +38,82 @@
   font-weight: 700;
 }
 
+#zipcode-input-search {
+  min-width: 400px;
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+#search-btn {
+  min-width: 40px;
+  min-height: 40px;
+  position: relative;
+  top: 5px;
+  left: 7px;
+  border-radius: 25px;
+  color: rgb(13, 215, 255);
+  background-color: olivedrab;
+  border-style: solid;
+  border-width: 2px;
+  border-color: olivedrab;
+  cursor: pointer;
+}
+
+.fa-droplet {
+  min-height: 25px;
+}
+
+.water {
+  background-color: olivedrab;
+  border-color: olivedrab;
+  border-radius: 10px;
+  min-width: 5px;
+}
+
+.water-group {
+  padding-right: 10px;
+}
+
+h1,
+p,
+#zipcode-input-search {
+  margin-left: 20px;
+}
+
+.home {
+  position: relative;
+  z-index: 3;
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+  padding-left: 30px;
+}
+
+.home:hover,
+.profile:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.profile {
+  position: relative;
+  z-index: 3;
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100%;
     min-height: 0;
-    padding-bottom: 0;
+    padding-bottom: 50;
+    padding-right: 70px;
   }
   .masthead:before {
     transform: skewX(-9deg);
