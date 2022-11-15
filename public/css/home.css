@@ -35,11 +35,12 @@
   left: 45%;
   font-size: medium;
 }
-a.button3 {
-  display: inline-block;
-  padding: 1.3em 1.2em;
-  margin: 0 1.3em 0.3em 0;
-  border-radius: 2em;
+a.button3{
+  margin-top: 265;
+  display:inline-block;
+  padding:1.3em 1.2em;
+  /* margin:0 1.3em 0.3em 0; */
+  border-radius:2em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Roboto", sans-serif;

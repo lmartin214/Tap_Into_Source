@@ -19,101 +19,48 @@ Post.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false,
-      comments: "",
     },
-    //   distance: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    //   },
-    //   movingOrStill: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   source: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   tested: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: false,
-    //     comments: "",
-    //   },
-    //   drinkable: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   visibility: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: false,
-    //     comments: "",
-    //   },
-    //   depth: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    //     comments: "",
-    //   },
-    //   swimmable: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   accessibility: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    //     comments: "",
-    //   },
-    //   isHike: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   isDrive: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   parking: {
-    //     type: DataTypes.BOOLEAN,
-    //     allowNull: false,
-    //     comments: "",
-    //   },
-    //   dogs: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true,
-    //     comments: "",
-    //   },
-    //   additionalComments: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    //   },
     zip: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    country: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    accessibility: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    whichTests: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    trailDifficulty: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    footTraffic: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    parking: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    dogs: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    depth: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
-
-  //   parking: {
-  //     type: DataTypes.BOOLEAN,
-  //     allowNull: false,
-  //     comments: "",
-  //   },
-  //   dogs: {
-  //     type: DataTypes.STRING,
-  //     allowNull: true,
-  //     comments: "",
-  //   },
-  //   additionalComments: {
-  //     type: DataTypes.STRING,
-  //     allowNull: false,
-  //   },
-  //   zip: {
-  //     type: DataTypes.INTEGER,
-  //     allowNull: false,
-  //   },
-  // },
 
   {
     sequelize,
