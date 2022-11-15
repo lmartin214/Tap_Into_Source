@@ -38,10 +38,10 @@ router.post("/", async (req, res) => {
       whichTests: req.body.whichTests,
       footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
-      
-      // parking: req.body.parking,
+
+      parking: req.body.parking,
       // depth: req.body.depth,
-      // dogs: req.body.dogs,
+      dogs: req.body.dogs,
     });
     console.log("new post");
     res.json(newPost);

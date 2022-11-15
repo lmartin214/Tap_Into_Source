@@ -52,10 +52,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // dogs: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
+    dogs: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     // depth: {
     //   type: DataTypes.INTEGER,
     //   allowNull: true,
