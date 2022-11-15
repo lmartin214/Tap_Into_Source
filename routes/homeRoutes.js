@@ -22,7 +22,7 @@ router.get('/signup',(req,res)=>{
         return
     }
     res.render('signup',{
-        layout:"signuplayout",
+        layout:"signup",
         style: "signup.css",
         
     })

@@ -26,7 +26,7 @@ Post.init(
       allowNull: false,
     },
     movingOrStill: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING,
       allowNull: true,
       comments: "",
     },
