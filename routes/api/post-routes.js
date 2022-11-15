@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
 });
 
 //get posts by country
-
 // get posts by zip
 router.get("/:zip", async (req, res) => {
   try {
@@ -26,7 +25,7 @@ router.get("/:zip", async (req, res) => {
   }
 });
 
-// create new post **********
+// create new post 
 router.post("/", async (req, res) => {
   console.log("in the route");
   try {
@@ -35,18 +34,13 @@ router.post("/", async (req, res) => {
       country: req.body.country,
       zip: req.body.zip,
       state: req.body.state,
-      // movingOrStill: req.body.movingOrStill,
-      // waterSource: req.body.waterSource,
-      // tests: req.body.tests,
       whichTests: req.body.whichTests,
-      // ************************* //
       accessibility: req.body.accessibility,
       footTraffic: req.body.accessibility,
       trailDifficulty: req.body.trailDifficulty,
       parking: req.body.parking,
       depth: req.body.depth,
       dogs: req.body.depth,
-      // rating: req.body.rating,
     });
     console.log("new post");
     res.json(newPost);

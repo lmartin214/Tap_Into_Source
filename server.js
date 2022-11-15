@@ -9,7 +9,6 @@ const exphbs = require("express-handlebars");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
-// datepicker
 
 // object will define parameters that a user will have //
 const sess = {

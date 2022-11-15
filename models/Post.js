@@ -19,7 +19,6 @@ Post.init(
     type: {
       type: DataTypes.STRING,
       allowNull: false,
-      // comments: "",
     },
     zip: {
       type: DataTypes.INTEGER,
@@ -32,28 +31,11 @@ Post.init(
     country: {
       type: DataTypes.STRING,
       allowNull: false,
-    // },
-    // movingOrStill: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // waterSource: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // tests: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    //   comments: "",
-    // },
+    },
     whichTests: {
       type: DataTypes.STRING,
       allowNull: true,
-      comments: "",
     },
-    // ************************** //
     accessibility: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -65,7 +47,7 @@ Post.init(
     footTraffic: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
     parking: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -79,25 +61,6 @@ Post.init(
       allowNull: true,
       comments: "",
     },
-    // rating: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-
-
- 
-
-
-
- 
-    // swimmable: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-
-
   },
 
   {
