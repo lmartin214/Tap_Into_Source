@@ -5,11 +5,12 @@ const postForm = async function (event) {
   const country = document.querySelector("#country");
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
-  const movingOrStill = document.querySelector("#movingOrStill");
-  const waterSource = document.querySelector("#waterSource");
+  // const movingOrStill = document.querySelector("#movingOrStill");
+  // const waterSource = document.querySelector("#waterSource");
   const tests = document.querySelector("#tests");
   const whichTests = document.querySelector("#whichTests");
   const accessibility = document.querySelector("#accessibility");
+  // const footTraffic = document.querySelector("#footTraffic");
   const trailDifficulty = document.querySelector("#trailDifficulty");
   const parking = document.querySelector("#parking");
   const depth = document.querySelector("#depth");
@@ -24,16 +25,17 @@ const postForm = async function (event) {
       zip: zip.value,
       state: state.value,
       // **************** //
-      movingOrStill: movingOrStill.value,
+      // movingOrStill: movingOrStill.value,
       // waterSource: waterSource.value,
       // tests: tests.value,
-      // whichTests: whichTests.value,
+      whichTests: whichTests.value,
       // **************** //
       accessibility: accessibility.value,
-      // trailDifficulty: trailDifficulty.value,
-      // parking: parking.value,
-      // depth: depth.value,
-      // dogs: dogs.value,
+      trailDifficulty: trailDifficulty.value,
+      footTraffic: footTraffic.value,
+      parking: parking.value,
+      depth: depth.value,
+      dogs: dogs.value,
       // rating: rating.value,
     }),
     headers: {

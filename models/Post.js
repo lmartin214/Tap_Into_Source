@@ -32,12 +32,12 @@ Post.init(
     country: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    movingOrStill: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      comments: "",
-    },
+    // },
+    // movingOrStill: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   comments: "",
+    // },
     // waterSource: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
@@ -48,102 +48,56 @@ Post.init(
     //   allowNull: false,
     //   comments: "",
     // },
-    // whichTests: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   comments: "",
-    // },
+    whichTests: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      comments: "",
+    },
     // ************************** //
     accessibility: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // trailDifficulty: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // parking: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // depth: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    //   comments: "",
-    // },
+    trailDifficulty: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    footTraffic: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
+    parking: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    dogs: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    depth: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      comments: "",
+    },
     // rating: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
     //   comments: "",
     // },
-    // if yes, which tests have you done? what were the results? 10) does not apply instead of boolean
-    // testsDone: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   comment: "",
-    // },
 
-    // distance: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
 
-    // tested: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // drinkable: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // visibility: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // depth: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   comments: "",
-    // },
+ 
+
+
+
+ 
     // swimmable: {
     //   type: DataTypes.BOOLEAN,
     //   allowNull: true,
     //   comments: "",
     // },
-    // accessibility: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // isHike: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // isDrive: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // parking: {
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    //   comments: "",
-    // },
-    // dogs: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    //   comments: "",
-    // },
-    // additionalComments: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+
+
   },
 
   {
