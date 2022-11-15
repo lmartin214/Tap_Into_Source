@@ -47,17 +47,8 @@ router.get("/post", (req, res) => {
   });
 });
 
-router.get("/search", (req, res) => {
-  res.render("search", {
-    layout: "searchlayout",
-    style: "search.css",
-  });
-});
 
-router.get("/results", (req, res) => {
-  res.render("results", {
-    layout: "main",
-  });
-});
 
-module.exports = router;
+
+
+module.exports = router
