@@ -31,11 +31,11 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static('public/img'))
+app.use(express.static("public/img"));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. change false to true when you want to recreate db but lose data
-sequelize.sync({ force: true }).then(function () {
+sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   });
