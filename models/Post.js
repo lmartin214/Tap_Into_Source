@@ -56,10 +56,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // depth: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    // },
+    depth: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
 
   {
