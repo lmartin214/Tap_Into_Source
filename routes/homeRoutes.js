@@ -1,11 +1,20 @@
-const router = require("express").Router();
-const { User, Post } = require("../models/");
+const router = require('express').Router()
+const {
+    User, Post
+} = require('../models/')
+const withAuth = require('../utils/auth')
 
-router.get("/", (req, res) => {
-  res.render("home", {
-    layout: "main",
-  });
-});
+router.get('/',(req,res)=>{
+res.render('home',{
+    layout:'main'
+})
+})
+
+router.get('/profile', withAuth ,(req,res)=>{
+    res.render('profile',{
+        layout:'main'
+    })
+    })
 
 router.get('/signup',(req,res)=>{
     if (req.session.loggedIn){
@@ -13,7 +22,7 @@ router.get('/signup',(req,res)=>{
         return
     }
     res.render('signup',{
-        layout:"signuplayout",
+        layout:"signup",
         style: "signup.css",
         
     })
