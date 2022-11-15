@@ -10,6 +10,7 @@ const searchPosts = async function (event) {
   })
     .then((res) => res.json())
     .then((data) => console.log(data))
+    // trying to append data here //
     .then((data) => {
       console.log(data.id);
       var resultsCard = $("<div>").addClass("col card future");
@@ -21,7 +22,10 @@ const searchPosts = async function (event) {
 };
 
 let type = "";
+// event listener that calls searchPosts function //
 document.querySelector("#search-form").addEventListener("submit", searchPosts);
+
+// event listener for water type buttons to grab type value for url //
 const buttons = document.querySelectorAll(".water");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {

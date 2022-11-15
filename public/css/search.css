@@ -1,9 +1,12 @@
+/* video styling */
 .water-video {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+/* styling of masthead */
 .masthead {
   position: relative;
   overflow: visible;
@@ -38,6 +41,7 @@
   font-weight: 700;
 }
 
+/* search input field */
 #zipcode-input-search {
   min-width: 400px;
   min-height: 40px;
@@ -45,6 +49,7 @@
   padding-left: 10px;
 }
 
+/* search button */
 #search-btn {
   min-width: 40px;
   min-height: 40px;
@@ -60,10 +65,12 @@
   cursor: pointer;
 }
 
+/* droplet icon inside of search button */
 .fa-droplet {
   min-height: 25px;
 }
 
+/* water type filter buttons */
 .water {
   background-color: olivedrab;
   border-color: olivedrab;
@@ -81,6 +88,7 @@ p,
   margin-left: 20px;
 }
 
+/* home page link */
 .home {
   position: relative;
   z-index: 3;
@@ -98,6 +106,7 @@ p,
   text-decoration: none;
 }
 
+/* profile page link */
 .profile {
   position: relative;
   z-index: 3;
@@ -108,6 +117,7 @@ p,
   color: white;
 }
 
+/* results styling */
 #post-card {
   overflow-y: auto;
   position: relative;
@@ -125,10 +135,12 @@ p,
   padding-left: 10px;
 }
 
+/* class change to hide results box */
 .hide {
   display: none;
 }
 
+/* masthead styling @ different sizes */
 @media (min-width: 992px) {
   .masthead {
     height: 100%;
