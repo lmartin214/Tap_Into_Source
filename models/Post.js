@@ -44,10 +44,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // footTraffic: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
+    footTraffic: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     // parking: {
     //   type: DataTypes.STRING,
     //   allowNull: true,

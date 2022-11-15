@@ -22,9 +22,9 @@ const postForm = async function (event) {
       state: state.value,
       accessibility: accessibility.value,
       whichTests: whichTests.value,
-
       trailDifficulty: trailDifficulty.value,
-      // footTraffic: footTraffic.value,
+
+      footTraffic: footTraffic.value,
       // parking: parking.value,
       // depth: depth.value,
       // dogs: dogs.value,

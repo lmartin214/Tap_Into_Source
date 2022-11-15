@@ -138,7 +138,7 @@
           id="closestAddress"
           placeholder="1234 Main St"
           required=""
-        />
+        /></div>
 
 {{! Moving or Still? }} 
 <h4 class="mb-3">Moving or Still Water?</h4>
@@ -239,19 +239,17 @@
     <option>I drove right up!</option>
     <option>I did some hiking AND some driving</option>
   </select>
-</div>
 
 {{! Trail Difficulty}}
-<div>
   <h4 class="col-md-4 mb-3">
     <label for="difficulty">Trail Difficulty</label>
   </h4>
-<select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
+  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
+  <option value="">Choose...</option>
   <option>easy</option>
   <option>moderate</option>
   <option>hard</option>
 </select>
-</div>
 
 {{! Parking }}
 <div class="form-outline w-25 mb-4">
@@ -268,19 +266,19 @@
 </div>
      
 {{! Foot traffic }}
-<h4 class="col-md-4 mb-3">
-  <label>Foot traffic</label>
-  <select class="custom-select d-block w-100" id="footTraffic" required="">
-</h4>
-  <option value=""></option>
-    <option>easy</option>
-    <option>moderate</option>
-    <option>hard</option>
-  </select>
-  <textarea class="form-control" id="depth" rows="3"></textarea>
-<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>      
+  <h4 class="col-md-4 mb-3">
+    <label>Foot traffic</label>
+  </h4>
+<select class="custom-select d-block w-100" value="" id="footTraffic" required="">
+  <option>Choose...</option>
+  <option>a lil</option>
+  <option>moderate</option>
+  <option>heavy</option>
+</select>
+
+
+<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button> 
 </form>
-</div>
-</div>
+
 <script src = "/js/post.js"> </script>
 

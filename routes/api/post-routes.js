@@ -36,9 +36,9 @@ router.post("/", async (req, res) => {
       state: req.body.state,
       accessibility: req.body.accessibility,
       whichTests: req.body.whichTests,
-
-      // footTraffic: req.body.footTraffic,
+      footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
+      
       // parking: req.body.parking,
       // depth: req.body.depth,
       // dogs: req.body.dogs,
