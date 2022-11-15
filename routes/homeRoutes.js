@@ -4,11 +4,11 @@ const {
 } = require('../models/')
 const withAuth = require('../utils/auth')
 
-router.get('/',(req,res)=>{
-res.render('home',{
-    layout:'main'
-})
-})
+router.get("/", (req, res) => {
+  res.render("home", {
+    layout: "main",
+  });
+});
 
 router.get('/profile', withAuth ,(req,res)=>{
     res.render('profile',{
@@ -22,7 +22,7 @@ router.get('/signup',(req,res)=>{
         return
     }
     res.render('signup',{
-        layout:"signup",
+        layout:"signuplayout",
         style: "signup.css",
         
     })
