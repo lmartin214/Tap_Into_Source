@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const { Post } = require("../../models");
 
-// The `/api/products` endpoint
-
 // get all posts
 router.get("/", (req, res) => {
   try {
