@@ -48,10 +48,10 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // parking: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true,
-    // },
+    parking: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     // dogs: {
     //   type: DataTypes.STRING,
     //   allowNull: true,
