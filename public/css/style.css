@@ -1,0 +1,10 @@
+#sticky-map{
+    position: fixed no-repeat; 
+    left: 50%;
+    margin-left:auto;
+    min-width:auto;
+    min-height: auto;
+    width: auto; /* leave this as auto*/
+    height: auto;
+    transform: translate(-50%, -50%);
+}

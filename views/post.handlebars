@@ -1,3 +1,11 @@
+{{!-- <link rel=¨stylesheet¨ type=¨text/css¨ href=¨..\[public]\[style].css¨> --}}
+<div class="col-md-4" id="sticky-map">
+  <div>
+    map
+  </div>
+</div>
+
+
 <div class="py-5 text-center">
   <h2>Add New Water Source</h2>
   <p class="lead">Answer the folowing prompts to add a new watersource to our
@@ -8,14 +16,15 @@
     <h4 class="d-flex justify-content-between align-items-center mb-3">
       <span class="text-muted">Drop a Pin</span>
     </h4>
-
   </div>
-  <div class="col-md-8 order-md-1">
+
+{{! Water Source}}
+<div class="col-md-8 order-md-1">
     <h4 class="mb-3">Follow the Prompts</h4>
           <div class="row">
         <div class="col-md-5 mb-3">
-        <form id="post-form">
-         <label>What Type of Water Source?</label>
+  <form id="post-form">
+        <label>What Type of Water Source?</label>
           <select class="custom-select d-block w-100" id="type" required="">
             <option value="">Choose...</option>
             <option>Waterfall</option>
@@ -30,7 +39,7 @@
             Please select a valid water source.
           </div>
         
-        {{!-- adresss --}}
+        {{!-- address --}}
          <div class="row">
         <div class="col-md-5 mb-3">
           <label for="country">Country</label>
@@ -116,187 +125,160 @@
         </div>
       </div>
     <div class="mb-3">
-        <label for="address">Closest Address to Water Source</label>
+        <label for="">Closest Address to Water Source</label>
         <input
           type="text"
           class="form-control"
-          id="address"
+          id="closestAddress"
           placeholder="1234 Main St"
           required=""
-        />
-        <div class="invalid-feedback">
-          Please enter your shipping address.
-        </div>
-      </div>
-            <hr class="mb-4" />
-      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to
-        checkout</button>
-    </form>
-  </div>
+        /></div>
+
+{{! Moving or Still? }} 
+<h4 class="mb-3">Moving or Still Water?</h4>
+<div id="movingOrStill">
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="movingWater">
+  <label class="form-check-label" for="inlineCheckbox1">Moving Water</label>
 </div>
-<script src = "/js/post.js"> </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    {{!-- <form class="needs-validation" novalidate="">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="firstName">First name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="firstName"
-            placeholder=""
-            value=""
-            required=""
-          />
-          <div class="invalid-feedback">
-            Valid first name is required.
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="lastName">Last name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="lastName"
-            placeholder=""
-            value=""
-            required=""
-          />
-          <div class="invalid-feedback">
-            Valid last name is required.
-          </div>
-        </div>
-      </div>
 
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="stillWater">
+  <label class="form-check-label" for="inlineCheckbox1">Still Water</label>
+</div>
+</div>
+    
+{{!-- Water Source --}}
+<h4 class="mb-3">Water Source</h4>
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Rain Water</label>
+</div>
 
-      <div class="mb-3">
-        <label for="email">Email
-          <span class="text-muted">(Optional)</span></label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          placeholder="you@example.com"
-        />
-        <div class="invalid-feedback">
-          Please enter a valid email address for shipping updates.
-        </div>
-      </div>
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox1">Snow Water</label>
+</div>
 
-  
+<div class="form-check form-checkbox">
+  <input class="form-check-input" type="checkbox" id="Checkbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox1">Ground Water</label>
+</div>
 
     
+{{! Water Testing }}
+<h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label>
+</h4>
 
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+ <a href="#" class="list-group-item list-group-item-action list-group-item-primary">1. Lead - positive (>15ppb) / negative (<15ppb)</a>
+  <label class="form-check-label" for="inlineCheckbox1"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">2. pH levels - 0 to 14, most acidic to most basic</a>
+  <label class="form-check-label" for="inlineCheckbox1"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">3. Total alkalinity - (0, 40, 80, 120, 180, 240, 500)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">4. Copper - 0 to 2 (0.0, 0.05, 0.1, 0.2, 0.4, 1.0, 2.0)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">5. Nitrate - (0, 2, 10, 20, 50)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info">6. Nitrite - (0, 0.2, 1.0, 1.5, 3.0)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-light">7. Chlorine - (0, 0.2, 1.0, 4.0, 10)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option8">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark">8. Hardness - (0, 50, 120, 250, 425, 1000)</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option9">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-purple">9. Coliform bacteria present? y/n</a>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
+</div>
+
+
+{{! Which tests were done? What were the results?}}
+  <h4 class="form-group">
+    <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
+    <textarea class="form-control" id="whichTests" rows="3"></textarea>
+  </h4>
+
+{{! Accessibility}}
+<h4 class="col-md-4 mb-3">
+  <label for="state">Accessibility</label>
+  <select class="custom-select d-block w-100" id="accessibility" required="">
+</h4>
+  <option value="">Choose...</option>
+    <option>I hiked in!</option>
+    <option>I drove right up!</option>
+    <option>I did some hiking AND some driving</option>
+  </select>
+
+{{! Trail Difficulty}}
+  <h4 class="col-md-4 mb-3">
+    <label for="difficulty">Trail Difficulty</label>
+  </h4>
+  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
+  <option value="">Choose...</option>
+  <option>easy</option>
+  <option>moderate</option>
+  <option>hard</option>
+</select>
+
+{{! Parking }}
+<div class="form-outline w-25 mb-4">
+  <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
+  <textarea class="form-control" id="parking" rows="3"></textarea>
+</div>
+        
+{{! Depth }}  
+<div class="form-outline w-25 mb-4">
+      <h4>Depth</h4>
+      <h8> ex: 35" or I'm 5'4 and the water was waist level on me</h8>
+      <h6>Swimmable?</h6>
+      <textarea class="form-control" id="depth" rows="3"></textarea>
+</div>
      
-      <hr class="mb-4" />
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="same-address" />
-        <label class="custom-control-label" for="same-address">Shipping address
-          is the same as my billing address</label>
-      </div>
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="save-info" />
-        <label class="custom-control-label" for="save-info">Save this
-          information for next time</label>
-      </div>
-      <hr class="mb-4" />
+{{! Foot traffic }}
+  <h4 class="col-md-4 mb-3">
+    <label>Foot traffic</label>
+  </h4>
+<select class="custom-select d-block w-100" value="" id="footTraffic" required="">
+  <option>Choose...</option>
+  <option>a lil</option>
+  <option>moderate</option>
+  <option>heavy</option>
+</select>
 
-      <h4 class="mb-3">Payment</h4>
+{{! Dog friendly? }}
+<div class="form-outline w-25 mb-4">
+    <h4>Dog friendly?</h4>
+      <textarea class="form-control" id="dogs" rows="3"></textarea>
+</div>
 
-      <div class="d-block my-3">
-        <div class="custom-control custom-radio">
-          <input
-            id="credit"
-            name="paymentMethod"
-            type="radio"
-            class="custom-control-input"
-            checked=""
-            required=""
-          />
-          <label class="custom-control-label" for="credit">Credit card</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input
-            id="debit"
-            name="paymentMethod"
-            type="radio"
-            class="custom-control-input"
-            required=""
-          />
-          <label class="custom-control-label" for="debit">Debit card</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input
-            id="paypal"
-            name="paymentMethod"
-            type="radio"
-            class="custom-control-input"
-            required=""
-          />
-          <label class="custom-control-label" for="paypal">Paypal</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="cc-name">Name on card</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cc-name"
-            placeholder=""
-            required=""
-          />
-          <small class="text-muted">Full name as displayed on card</small>
-          <div class="invalid-feedback">
-            Name on card is required
-          </div>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="cc-number">Credit card number</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cc-number"
-            placeholder=""
-            required=""
-          />
-          <div class="invalid-feedback">
-            Credit card number is required
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mb-3">
-          <label for="cc-expiration">Expiration</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cc-expiration"
-            placeholder=""
-            required=""
-          />
-          <div class="invalid-feedback">
-            Expiration date required
-          </div>
-        </div>
-        <div class="col-md-3 mb-3">
-          <label for="cc-expiration">CVV</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cc-cvv"
-            placeholder=""
-            required=""
-          />
-          <div class="invalid-feedback">
-            Security code required
-          </div>
-        </div>
-      </div> --}}
+
+<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button> 
+</form>
+
+<script src = "/js/post.js"> </script>
+
