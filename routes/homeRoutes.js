@@ -28,6 +28,18 @@ router.get('/signup',(req,res)=>{
     })
 })
 
+router.get('/login',(req,res)=>{
+  if (req.session.loggedIn){
+      res.redirect('/')
+      return
+  }
+  res.render('login',{
+      layout:"loginlayout",
+      style: "login.css",
+      
+  })
+})
+
 router.get("/post", (req, res) => {
   res.render("post", {
     layout: "main",
