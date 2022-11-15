@@ -38,4 +38,10 @@ router.get("/search", (req, res) => {
   });
 });
 
+router.get("/results", (req, res) => {
+  res.render("results", {
+    layout: "main",
+  });
+});
+
 module.exports = router;

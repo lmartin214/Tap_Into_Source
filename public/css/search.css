@@ -108,6 +108,27 @@ p,
   color: white;
 }
 
+#post-card {
+  overflow-y: auto;
+  position: relative;
+  z-index: 100 !important;
+  min-width: 1410px;
+  min-height: 500px;
+  padding-left: 10px;
+}
+
+#post-div {
+  position: relative;
+  z-index: 100 !important;
+  float: right;
+  min-width: 1410px;
+  padding-left: 10px;
+}
+
+.hide {
+  display: none;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100%;

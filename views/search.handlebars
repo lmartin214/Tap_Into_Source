@@ -11,40 +11,50 @@
 <!-- Masthead-->
 <a class="home" href="/">Tap in to Source</a>
 <a class="profile" href="/profile">Go Back</a>
+<div>
+  <div class="masthead">
+    <div class="masthead-content text-white">
+      <div class="container-fluid px-4 px-lg-0">
+        <h1 class="fst-italic lh-1 mb-4">Look Up Stream</h1>
+        <p class="mb-5">Enter a zip code then filter by the water source</p>
 
-<div class="masthead">
-  <div class="masthead-content text-white">
-    <div class="container-fluid px-4 px-lg-0">
-      <h1 class="fst-italic lh-1 mb-4">Look Up Stream</h1>
-      <p class="mb-5">Enter a zip code then filter by the water source</p>
+        <div class="search-container">
+          <form id="search-form">
+            <input
+              type="text"
+              id="zipcode-input-search"
+              placeholder="Enter a Zip Code.."
+              name="search"
+            />
+            <button id="search-btn" type="submit"><i
+                class="fa-solid fa-droplet"
+              ></i></button>
+            <div class="water-group">
+              <button
+                type="button"
+                class="btn btn-success water"
+              >Waterfall</button>
+              <button type="button" class="btn btn-success water">Lake</button>
+              <button type="button" class="btn btn-success water">River</button>
+              <button type="button" class="btn btn-success water">Pond</button>
+              <button type="button" class="btn btn-success water">Creek</button>
+              <button type="button" class="btn btn-success water">Hot Spring</button>
+              <button type="button" class="btn btn-success water">Cold Spring</button>
+            </div>
 
-      <div class="search-container">
-        <form id="search-form">
-          <input
-            type="text"
-            id="zipcode-input-search"
-            placeholder="Enter a Zip Code.."
-            name="search"
-          />
-          <button id="search-btn" type="submit"><i
-              class="fa-solid fa-droplet"
-            ></i></button>
-          <div class="water-group">
-            <button
-              type="button"
-              class="btn btn-success water"
-            >Waterfall</button>
-            <button type="button" class="btn btn-success water">Lake</button>
-            <button type="button" class="btn btn-success water">River</button>
-            <button type="button" class="btn btn-success water">Pond</button>
-            <button type="button" class="btn btn-success water">Creek</button>
-            <button type="button" class="btn btn-success water">Hot Spring</button>
-            <button type="button" class="btn btn-success water">Cold Spring</button>
-          </div>
-
-        </form>
+          </form>
+        </div>
       </div>
+    </div>
+  </div>
 
+  <div class="col-md-3" id="post-div">
+    <div id="post-results">
+      <div class="card text-center">
+        <div class="card-body" id="post-card">
+          results here
+        </div>
+      </div>
     </div>
   </div>
 </div>

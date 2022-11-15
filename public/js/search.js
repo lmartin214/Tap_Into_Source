@@ -1,4 +1,4 @@
-// function to search posts by zip code //
+// function to search posts by zip code and water type //
 const searchPosts = async function (event) {
   event.preventDefault();
   console.log("hello hello!");
@@ -9,7 +9,15 @@ const searchPosts = async function (event) {
     method: "GET",
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data.id);
+      var resultsCard = $("<div>").addClass("col card future");
+      var source = $("<p>").addClass("water-type").text(data.id);
+
+      resultsCard.append(source);
+      $("#post-card").append(resultsCard);
+    });
 };
 
 let type = "";
@@ -17,12 +25,12 @@ document.querySelector("#search-form").addEventListener("submit", searchPosts);
 const buttons = document.querySelectorAll(".water");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
-    // button.disabled = true;
     type = event.target.innerHTML;
     console.log("type", type);
   });
 });
 
+// code to toggle through water type buttons //
 $(".btn").on("click", function () {
   $(this).siblings(".water").removeClass("active");
   $(this).addClass("active");
