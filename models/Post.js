@@ -95,25 +95,25 @@ Post.init(
     },
   },
 
-    parking: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      comments: "",
-    },
-    dogs: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      comments: "",
-    },
-    additionalComments: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    zip: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-  },
+  //   parking: {
+  //     type: DataTypes.BOOLEAN,
+  //     allowNull: false,
+  //     comments: "",
+  //   },
+  //   dogs: {
+  //     type: DataTypes.STRING,
+  //     allowNull: true,
+  //     comments: "",
+  //   },
+  //   additionalComments: {
+  //     type: DataTypes.STRING,
+  //     allowNull: false,
+  //   },
+  //   zip: {
+  //     type: DataTypes.INTEGER,
+  //     allowNull: false,
+  //   },
+  // },
 
   {
     sequelize,

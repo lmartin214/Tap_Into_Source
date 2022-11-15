@@ -1,11 +1,11 @@
 <video
-  class="bg-video"
+  class="water-video"
   playsinline="playsinline"
   autoplay="autoplay"
   muted="muted"
   loop="loop"
 ><source
-    src="assets/mp4/water_river_stream_flow_nature_1007.mp4"
+    src="/mp4/water_river_stream_flow_nature_1007.mp4"
     type="video/mp4"
   /></video>
 <!-- Masthead-->
@@ -16,9 +16,29 @@
       <p class="mb-5">Enter a zip code here!</p>
 
       <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit"><i class="fa-solid fa-droplet"></i></button>
+        <form id="search-form">
+          <input
+            type="text"
+            id="zipcode-input-search"
+            placeholder="Enter a Zip Code.."
+            name="search"
+          />
+          <button id="search-btn" type="submit"><i
+              class="fa-solid fa-droplet"
+            ></i></button>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <button
+              type="button"
+              class="btn btn-success water"
+            >Waterfall</button>
+            <button type="button" class="btn btn-success water">Lake</button>
+            <button type="button" class="btn btn-success water">River</button>
+            <button type="button" class="btn btn-success water">Pond</button>
+            <button type="button" class="btn btn-success water">Creek</button>
+            <button type="button" class="btn btn-success water">Hot Spring</button>
+            <button type="button" class="btn btn-success water">Cold Spring</button>
+          </div>
+
         </form>
       </div>
 
@@ -27,48 +47,10 @@
 </div>
 
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-></script>
-
-{{! ************************************* }}
-
-{{! <p> this is where we will search for posts</p>
-
-<div class="card">
-  <div class="card-header">
-    <h2>Sign Up</h2>
-  </div>
-  <div id="search" role="tabpanel">
-    <form id="search-form" class="card-body">
-      <div>
-        <div>
-          <label for="enter-zip"></label>
-          <input
-            type="text"
-            id="zipcode-input-search"
-            placeholder="Enter a Zip Code"
-          />
-        </div>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <button type="button" class="btn btn-success water">Waterfall</button>
-          <button type="button" class="btn btn-success water">Lake</button>
-          <button type="button" class="btn btn-success water">River</button>
-          <button type="button" class="btn btn-success water">Pond</button>
-          <button type="button" class="btn btn-success water">Creek</button>
-          <button type="button" class="btn btn-success water">Hot Spring</button>
-          <button type="button" class="btn btn-success water">Cold Spring</button>
-        </div>
-      </div>
-      <button type="submit" id="search-btn" class="btn">Look Up Stream</button>
-    </form>
-
-  </div>
-</div>
-<script
   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
 ></script>
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 ></script>
 
-<script src="/js/search.js"> </script> }}
+<script src="/js/search.js"> </script>
