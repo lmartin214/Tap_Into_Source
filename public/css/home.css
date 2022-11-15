@@ -1,14 +1,16 @@
 /* Makes the top navigation transparent */
 .topnav {
-  background-color:transparent;
+  background-color: transparent;
   overflow: hidden;
 }
 
 /* Styles the links inside the navigation bar */
 .topnav a {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   float: right;
-  color: #ffffff;
+  color: #f2f2f27c;
   text-align: center;
   text-decoration: none;
   justify-content: space-between;
@@ -29,10 +31,9 @@
 
 .button3 {
   position: absolute;
-  top: 60.5%;
+  top: 65%;
   left: 45%;
   font-size: medium;
-  
 }
 a.button3{
   margin-top: 265;
@@ -41,38 +42,33 @@ a.button3{
   /* margin:0 1.3em 0.3em 0; */
   border-radius:2em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size:medium
-  font-weight:300;
-  color:#FFFFFF;
-  background-color:#4eb5f1;
-  text-align:center;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: medium;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
   transition: all 0.2s;
-  }
-  a.button3:hover{
-  background-color:#4095c6;
-  }
-  @media all and (max-width:30em){
-  a.button3{
-  display:block;
-  margin:0.2em auto;
+}
+a.button3:hover {
+  background-color: #4095c6;
+}
+@media all and (max-width: 30em) {
+  a.button3 {
+    display: block;
+    margin: 0.2em auto;
   }
 }
 
 header {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 3.5rem;
   text-align: center;
   padding-top: 140px;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  color: rgba(184, 184, 184, 0.705);
-}
-
-#example10{
-	color: white;
-	font-size: 110px;
-	-webkit-text-stroke: 1px #F8F8F8;
-	text-shadow: 0px 2px 4px#4eb5f1;
+  color: rgba(202, 198, 198, 0.791);
 }

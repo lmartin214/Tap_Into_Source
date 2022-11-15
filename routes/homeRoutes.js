@@ -1,8 +1,6 @@
-const router = require('express').Router()
-const {
-    User, Post
-} = require('../models/')
-const withAuth = require('../utils/auth')
+const router = require("express").Router();
+const { User, Post } = require("../models/");
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   res.render("home", {
@@ -13,36 +11,34 @@ router.get("/", (req, res) => {
 
 // router.get('/profile', withAuth ,(req,res)=>{
 
-router.get('/profile',(req,res)=>{
-    res.render('profile',{
-        layout:'profilelayout',
-        style: "profile.css",
-    })
-    })
+router.get("/profile", (req, res) => {
+  res.render("profile", {
+    layout: "profilelayout",
+    style: "profile.css",
+  });
+});
 
-router.get('/signup',(req,res)=>{
-    if (req.session.loggedIn){
-        res.redirect('/')
-        return
-    }
-    res.render('signup',{
-        layout:"signuplayout",
-        style: "signup.css",
-        
-    })
-})
-
-router.get('/login',(req,res)=>{
-  if (req.session.loggedIn){
-      res.redirect('/')
-      return
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
   }
-  res.render('login',{
-      layout:"loginlayout",
-      style: "login.css",
-      
-  })
-})
+  res.render("signup", {
+    layout: "signuplayout",
+    style: "signup.css",
+  });
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login", {
+    layout: "loginlayout",
+    style: "login.css",
+  });
+});
 
 router.get("/post", (req, res) => {
   res.render("post", {
@@ -52,8 +48,8 @@ router.get("/post", (req, res) => {
 
 router.get("/search", (req, res) => {
   res.render("search", {
-    layout: "search",
-    style: "search.css"
+    layout: "searchlayout",
+    style: "search.css",
   });
 });
 

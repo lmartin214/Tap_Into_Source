@@ -1,26 +1,40 @@
 const router = require("express").Router();
-const { Post, User } = require("../../models");
+const { Post } = require("../../models");
 
 // The `/api/products` endpoint
 
-// get all products
+// get all posts
 router.get("/", (req, res) => {
-  // find all products
-  // be sure to include its associated Category and Tag data
+  try {
+    Post.findAll().then((data) => res.json(data));
+  } catch (err) {
+    console.log(err.message);
+  }
 });
 
 //get posts by country
 // get posts by zip
-router.get("/:zip", async (req, res) => {
-  try {
-    const postZip = await User.findAll(req.params.zip);
-    if (!userData) {
-      res.status(404).json({ message: "No posts with this zip code!" });
-      return;
+router.get("/search/:zip/:type?", (req, res) => {
+  const { params } = req;
+  Object.keys(params).forEach((key) => {
+    if (params[key] === undefined) {
+      delete params[key];
     }
-    console.log(postZip);
-    res.status(200).json(postZip);
+  });
+  console.log("params", params);
+
+  try {
+    Post.findAll({
+      where: params,
+    }).then((data) => {
+      if (!data.length) {
+        res.status(404).json({ message: "No posts with these!" });
+      } else {
+        res.status(200).json(data);
+      }
+    });
   } catch (err) {
+    console.log(err.message);
     res.status(500).json(err);
   }
 });
