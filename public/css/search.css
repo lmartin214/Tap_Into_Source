@@ -122,7 +122,7 @@ html {
   }
 .masthead {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     z-index: 2;
     display: flex;
     align-items: center;
