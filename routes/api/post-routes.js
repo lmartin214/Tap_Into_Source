@@ -34,13 +34,14 @@ router.post("/", async (req, res) => {
       country: req.body.country,
       zip: req.body.zip,
       state: req.body.state,
-      whichTests: req.body.whichTests,
       accessibility: req.body.accessibility,
-      footTraffic: req.body.footTraffic,
+      whichTests: req.body.whichTests,
+
+      // footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
-      parking: req.body.parking,
-      depth: req.body.depth,
-      dogs: req.body.dogs,
+      // parking: req.body.parking,
+      // depth: req.body.depth,
+      // dogs: req.body.dogs,
     });
     console.log("new post");
     res.json(newPost);

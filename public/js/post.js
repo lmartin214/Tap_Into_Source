@@ -5,7 +5,6 @@ const postForm = async function (event) {
   const country = document.querySelector("#country");
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
-  const tests = document.querySelector("#tests");
   const whichTests = document.querySelector("#whichTests");
   const accessibility = document.querySelector("#accessibility");
   const footTraffic = document.querySelector("#footTraffic");
@@ -21,13 +20,14 @@ const postForm = async function (event) {
       country: country.value,
       zip: zip.value,
       state: state.value,
-      whichTests: whichTests.value,
       accessibility: accessibility.value,
+      whichTests: whichTests.value,
+
       trailDifficulty: trailDifficulty.value,
-      footTraffic: footTraffic.value,
-      parking: parking.value,
-      depth: depth.value,
-      dogs: dogs.value,
+      // footTraffic: footTraffic.value,
+      // parking: parking.value,
+      // depth: depth.value,
+      // dogs: dogs.value,
     }),
     headers: {
       "Content-Type": "application/json",

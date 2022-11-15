@@ -32,35 +32,34 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    whichTests: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     accessibility: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    whichTests: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     trailDifficulty: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    footTraffic: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    parking: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    dogs: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    depth: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      comments: "",
-    },
+    // footTraffic: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // parking: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // dogs: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // depth: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    // },
   },
 
   {

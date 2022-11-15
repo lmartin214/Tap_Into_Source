@@ -226,7 +226,7 @@
 {{! Which tests were done? What were the results?}}
   <h4 class="form-group">
     <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="whichTests" rows="3"></textarea>
   </h4>
 
 {{! Accessibility}}
@@ -244,9 +244,9 @@
 {{! Trail Difficulty}}
 <h4 class="col-md-4 mb-3">
   <label for="difficulty">Trail Difficulty</label>
-  <select class="custom-select d-block w-100" id="trailDifficulty" required="">
+  <select class="custom-select d-block w-100" required="">
 </h4>
-  <option value="">If applicable...</option>
+  <option id="trailDifficulty" value="">If applicable...</option>
     <option>easy</option>
     <option>moderate</option>
     <option>hard</option>
