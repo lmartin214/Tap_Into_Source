@@ -14,13 +14,14 @@ a:hover {
 
 #parent-card {
   width: 100%;
+  padding-top: 100px;
 }
 
-#map {
+/* #map {
   width: 90%;
   height: 100%;
   text-align: center;
-}
+} */
 
 #prompts-card {
   width: 1160px;
@@ -49,4 +50,22 @@ span {
   background-color: olivedrab;
   color: white;
   font-weight: 400;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#faux-google-pin {
+  max-width: 800px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+  padding-top: 100px;
+}
+
+.pin {
+  color: rgb(212, 25, 25);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
 }
