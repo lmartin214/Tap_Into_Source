@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { Post } = require("../../models");
-const { Op } = require("sequelize");
 
 // get all posts
 router.get("/", (req, res) => {
@@ -39,7 +38,6 @@ router.get("/search/:zip/:type?", (req, res) => {
 
 // create new post
 router.post("/", async (req, res) => {
-  console.log("in the route");
   try {
     const newPost = await Post.create({
       type: req.body.type,
