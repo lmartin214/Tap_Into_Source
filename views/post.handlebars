@@ -168,18 +168,12 @@
 
 </div>
 
-{{! Accessibility}}
-<div class="col">
-
-<h4>
-  <label for="state">Accessibility</label>
-  <select class="custom-select d-block w-100" id="accessibility" required="">
-</h4>
-  <option value="">Choose...</option>
-    <option>I hiked in!</option>
-    <option>I drove right up!</option>
-    <option>I did some hiking AND some driving</option>
-  </select>
+{{! Depth }}  
+<div class="form-outline w-25 mb-4">
+      <h4>Depth</h4>
+      <h8> ex: 35" or I'm 5'4 and the water was waist level on me</h8>
+      <h6>Swimmable?</h6>
+      <textarea class="form-control" id="depth" rows="3"></textarea>
 </div>
 {{! end of first row container }}
 </div>
@@ -242,13 +236,30 @@
 
 {{! Which tests were done? What were the results?}}
 <h4>
-  <label for="exampleFormControlTextarea1">What were the results?</label>
-  <textarea class="form-control" id="whichTests" rows="3"></textarea>
+  <label>What were the results?</label>
+  <textarea class="form-control" id="whichTests"></textarea>
 </h4>
 {{! end of 2nd row container }}
   </div>
 </div>
 
+
+{{! beginning of row }}
+<div class="container-fluid">
+  <div class="row">
+{{! Accessibility}}
+<div class="col">
+
+<h4>
+  <label for="state">Accessibility</label>
+  <select class="custom-select d-block w-100" id="accessibility" required="">
+</h4>
+  <option value="">Choose...</option>
+    <option>I hiked in!</option>
+    <option>I drove right up!</option>
+    <option>I did some hiking AND some driving</option>
+  </select>
+</div>
 
 {{! Trail Difficulty}}
   <h4 class="col-md-4 mb-3">
@@ -266,14 +277,6 @@
   <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
   <textarea class="form-control" id="parking" rows="3"></textarea>
 </div>
-        
-{{! Depth }}  
-<div class="form-outline w-25 mb-4">
-      <h4>Depth</h4>
-      <h8> ex: 35" or I'm 5'4 and the water was waist level on me</h8>
-      <h6>Swimmable?</h6>
-      <textarea class="form-control" id="depth" rows="3"></textarea>
-</div>
      
 {{! Foot traffic }}
   <h4 class="col-md-4 mb-3">
@@ -290,6 +293,10 @@
 <div class="form-outline w-25 mb-4">
     <h4>Dog friendly?</h4>
       <textarea class="form-control" id="dogs" rows="3"></textarea>
+</div>
+
+{{! end of row }}
+  </div>
 </div>
 
 

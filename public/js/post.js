@@ -5,7 +5,7 @@ const postForm = async function (event) {
   const country = document.querySelector("#country");
   const zip = document.querySelector("#zip");
   const state = document.querySelector("#state");
-  const whichTests = document.querySelector("#whichTests");
+  const testResults = document.querySelector("#testResults");
   const accessibility = document.querySelector("#accessibility");
   const footTraffic = document.querySelector("#footTraffic");
   const trailDifficulty = document.querySelector("#trailDifficulty");
@@ -21,7 +21,7 @@ const postForm = async function (event) {
       zip: zip.value,
       state: state.value,
       accessibility: accessibility.value,
-      whichTests: whichTests.value,
+      testResults: testResults.value,
       trailDifficulty: trailDifficulty.value,
       footTraffic: footTraffic.value,
       parking: parking.value,
