@@ -132,7 +132,7 @@
         /></div>
 
 {{! container for first row of form }}
-<div class="container-fluid">
+<div class="container">
   <div class="row">
 {{! Moving or Still? }} 
 <div class="col">
@@ -173,9 +173,10 @@
 
 {{! Depth }}  
 <div>
-      <h4>Depth</h4>
-      <h8> ex: 35" or 'I'm 5'4 and the water was waist level on me'</h8>
-      <h6>Swimmable?</h6>
+      <h4><center>Depth</center></h4>
+      <h8> ex: 35", 1.6256 m 
+        or 'I'm 5'4 and the water was waist level on me'</h8>
+      <h6><center>Swimmable?</center></h6>
       <textarea class="form-control" id="depth"></textarea>
 </div>
 {{! end of first row }}
@@ -187,10 +188,10 @@
   <div class="row">
 {{! Accessibility}}
 <div class="col">
-<h4>
-  <label>Accessibility</label>
-  <select class="custom-select d-block w-100" id="accessibility" required="">
-</h4>
+  <h4>
+    <label>Accessibility</label>
+  </h4>
+  <select class="custom-select d-block w-100" value: "" id="accessibility" required="">
   <option value="">Choose...</option>
     <option>I hiked in!</option>
     <option>I drove right up!</option>
@@ -203,11 +204,11 @@
   <h4>
     <label for="difficulty">Trail Difficulty</label>
   </h4>
-  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
-  <option value="">Choose...</option>
-  <option>easy</option>
-  <option>moderate</option>
-  <option>hard</option>
+  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">
+  <option value="">If applicable...</option>
+    <option>easy</option>
+    <option>moderate</option>
+    <option>hard</option>
   </select>
 </div>
 {{! Parking }}
@@ -241,7 +242,7 @@
 </div>
 
 {{! 2nd row container }}
-<div class="container-fluid">
+<div class="container">
   <div class="row">
 {{! Water Testing }}
 <div class="col">
@@ -298,7 +299,7 @@
 <div class="col">
 <h4>
   <label>What were the results?</label>
-  <textarea class="form-control" id="whichTests"></textarea>
+  <textarea class="form-control" id="testResults"></textarea>
 </h4>
 </div>
 {{! end of 2nd row }}
