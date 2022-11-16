@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const { Post } = require("../../models");
 
-// The `/api/products` endpoint
-
 // get all posts
 router.get("/", (req, res) => {
   try {
@@ -12,8 +10,7 @@ router.get("/", (req, res) => {
   }
 });
 
-//get posts by country
-// get posts by zip
+// get posts by zip and type //
 router.get("/search/:zip/:type?", (req, res) => {
   const { params } = req;
   Object.keys(params).forEach((key) => {
@@ -41,7 +38,6 @@ router.get("/search/:zip/:type?", (req, res) => {
 
 // create new post
 router.post("/", async (req, res) => {
-  console.log("in the route");
   try {
     const newPost = await Post.create({
       type: req.body.type,
@@ -49,7 +45,7 @@ router.post("/", async (req, res) => {
       zip: req.body.zip,
       state: req.body.state,
       accessibility: req.body.accessibility,
-      whichTests: req.body.whichTests,
+      testResults: req.body.testResults,
       footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
       parking: req.body.parking,
