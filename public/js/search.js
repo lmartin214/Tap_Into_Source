@@ -14,10 +14,8 @@ const searchPosts = async function (event) {
     method: "GET",
   })
     .then((res) => res.json())
-
     .then((searchResults) => {
       resultsDiv.innerHTML = "";
-
       // renders searched posts to page //
       searchResults.forEach((post) => {
         resultsDiv.innerHTML += `<div class="row">
@@ -39,6 +37,11 @@ const searchPosts = async function (event) {
               </div>
           </div>`;
       });
+    })
+    .catch((error) => {
+      results.classList.add("hide");
+      alert("There are no posts with those parameters yet!");
+      console.log(error);
     });
 };
 
