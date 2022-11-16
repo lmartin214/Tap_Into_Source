@@ -1,7 +1,7 @@
 <div id="parent-card">
 {{! API }}
   <div class="container-fluid" id="api-card">
-  <div class="col-xs-6">
+  <div>
     <h4 class="d-flex justify-content-between align-items-center mb-3">
       <span class="text-muted">Drop a Pin</span>
     </h4>
@@ -9,7 +9,7 @@
   </div>
 {{! Prompts }}
 <div class="container-fluid" id="prompts-card">
-<div class="col-xs-6">
+<div>
 <div class="py-5 text-center">
   <h2>Add New Water Source</h2>
   <p class="lead">Answer the folowing prompts to add a new watersource to our
@@ -134,11 +134,10 @@
 {{! container for first row of form }}
 <div class="container-fluid">
   <div class="row">
-
 {{! Moving or Still? }} 
 <div class="col">
 
-<h4 class="mb-3">Moving or Still Water?</h4>
+<h4>Moving or Still Water?</h4>
 <div id="movingOrStill">
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="movingWater">
@@ -154,7 +153,7 @@
 {{!-- Water Source --}}
 <div class="col">
 
-<h4 class="mb-3">Water Source</h4>
+<h4>Water Source</h4>
 <div class="form-check form-checkbox">
   <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
   <label class="form-check-label" for="inlineCheckbox1">Rain Water</label>
@@ -173,11 +172,11 @@
 </div>
 
 {{! Depth }}  
-<div class="form-outline w-25 mb-4">
+<div>
       <h4>Depth</h4>
-      <h8> ex: 35" or I'm 5'4 and the water was waist level on me</h8>
+      <h8> ex: 35" or 'I'm 5'4 and the water was waist level on me'</h8>
       <h6>Swimmable?</h6>
-      <textarea class="form-control" id="depth" rows="3"></textarea>
+      <textarea class="form-control" id="depth"></textarea>
 </div>
 {{! end of first row }}
 </div>
@@ -189,7 +188,7 @@
 {{! Accessibility}}
 <div class="col">
 <h4>
-  <label for="state">Accessibility</label>
+  <label>Accessibility</label>
   <select class="custom-select d-block w-100" id="accessibility" required="">
 </h4>
   <option value="">Choose...</option>
@@ -201,7 +200,7 @@
 
 {{! Trail Difficulty}}
 <div class="col">
-  <h4 class="col-md-4 mb-3">
+  <h4>
     <label for="difficulty">Trail Difficulty</label>
   </h4>
   <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
@@ -213,14 +212,14 @@
 </div>
 {{! Parking }}
 <div class="col">
-<div class="form-outline w-25 mb-4">
-  <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
-  <textarea class="form-control" id="parking" rows="3"></textarea>
+<div>
+  <h6 class="form-label"><h4>Parking?</h4>If so, please write any info that would help others</h6>
+  <textarea class="form-control" id="parking"></textarea>
 </div>
 </div> 
 {{! Foot traffic }}
 <div class="col">
-  <h4 class="col-md-4 mb-3">
+  <h4>
     <label>Foot traffic</label>
   </h4>
 <select class="custom-select d-block w-100" value="" id="footTraffic" required="">
@@ -232,9 +231,9 @@
 </div>
 {{! Dog friendly? }}
 <div class="col">
-<div class="form-outline w-25 mb-4">
+<div>
     <h4>Dog friendly?</h4>
-      <textarea class="form-control" id="dogs" rows="3"></textarea>
+      <textarea class="form-control" id="dogs"></textarea>
 </div>
 </div>
 {{! end of row }}
@@ -246,17 +245,17 @@
   <div class="row">
 {{! Water Testing }}
 <div class="col">
-<h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label></h4>
+<h4 class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label></h4>
 
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
  <a href="#" class="list-group-item list-group-item-action list-group-item-primary">1. Lead - positive (>15ppb) / negative (<15ppb)</a>
-  <label class="form-check-label" for="inlineCheckbox1"></label>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
 <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">2. pH levels - 0 to 14, most acidic to most basic</a>
-  <label class="form-check-label" for="inlineCheckbox1"></label>
+  <label class="form-check-label" for="inlineCheckbox2"></label>
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
