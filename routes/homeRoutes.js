@@ -9,8 +9,6 @@ router.get("/", (req, res) => {
   });
 });
 
-// router.get('/profile', withAuth ,(req,res)=>{
-
 router.get("/profile", (req, res) => {
   res.render("profile", {
     layout: "profilelayout",
