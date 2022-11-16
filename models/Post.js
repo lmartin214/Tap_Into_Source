@@ -24,42 +24,42 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    state: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    country: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    accessibility: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    whichTests: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    trailDifficulty: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    footTraffic: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    parking: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    dogs: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    depth: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // state: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // country: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // accessibility: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // whichTests: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // trailDifficulty: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // footTraffic: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
+    // parking: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // dogs: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // depth: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
   },
 
   {

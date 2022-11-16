@@ -46,10 +46,15 @@ router.get("/post", (req, res) => {
   });
 });
 
-router.get("/search", (req, res) => {
+router.get("/search", async (req, res) => {
+  const searchData = await Post.findAll();
+
+  const searches = searchData.map((search) => search.get({ plain: true }));
+  console.log(searches);
   res.render("search", {
     layout: "searchlayout",
     style: "search.css",
+    searches,
   });
 });
 
