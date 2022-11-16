@@ -36,9 +36,9 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    whichTests: {
+    testResults: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     trailDifficulty: {
       type: DataTypes.STRING,
