@@ -15,7 +15,6 @@ document.querySelector("#post-form").addEventListener(
     const depth = document.querySelector("#depth");
     const dogs = document.querySelector("#dogs");
 
-
     const response = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
@@ -37,7 +36,7 @@ document.querySelector("#post-form").addEventListener(
     });
     if (response.ok) {
       console.log("Posted!");
-      // redirect to whichever page you want to after you sign up //
+      window.location.replace("/profile");
     } else {
       alert("failed to post");
     }

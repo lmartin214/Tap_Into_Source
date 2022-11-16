@@ -7,6 +7,7 @@ const searchPosts = async function (event) {
   const input = document.querySelector("#zipcode-input-search");
   console.log(input.value);
   type = type.split(" ").join("-");
+  results.classList.remove("hide");
 
   console.log("type", type);
   fetch(`/api/posts/search/${input.value}/${type}`, {
@@ -50,7 +51,6 @@ const results = document.querySelector("#post-card");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     type = event.target.innerHTML;
-    results.classList.remove("hide");
     console.log("type", type);
   });
 });
