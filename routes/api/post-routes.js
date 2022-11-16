@@ -37,57 +37,22 @@ router.get("/search/:zip/:type?", (req, res) => {
   }
 });
 
-// get user input from search form //
-router.post("/search", async (req, res) => {
-  try {
-    const { id, zip, type } = req.body;
-    const orArray = [];
-
-    //2 !! means - does it exist and is a truthy value (not an empty string?)
-    //also called BANG
-    if (!!id) {
-      orArray.push({ id });
-    }
-    if (!!zip) {
-      orArray.push({ zip });
-    }
-    if (!!type) {
-      orArray.push({ type });
-    }
-    console.log("orArray", orArray);
-    const results = await MovieShow.findAll({
-      where: { [Op.or]: orArray },
-      include: [
-        {
-          model: Post,
-          // attributes: ["name"],
-        },
-      ],
-    });
-    console.log(results);
-    res.json(results);
-    // res.render('searchResults')
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 // create new post
 router.post("/", async (req, res) => {
   console.log("in the route");
   try {
     const newPost = await Post.create({
       type: req.body.type,
-      // country: req.body.country,
+      country: req.body.country,
       zip: req.body.zip,
-      // state: req.body.state,
-      // accessibility: req.body.accessibility,
-      // whichTests: req.body.whichTests,
-      // footTraffic: req.body.footTraffic,
-      // trailDifficulty: req.body.trailDifficulty,
-      // parking: req.body.parking,
-      // depth: req.body.depth,
-      // dogs: req.body.dogs,
+      state: req.body.state,
+      accessibility: req.body.accessibility,
+      whichTests: req.body.whichTests,
+      footTraffic: req.body.footTraffic,
+      trailDifficulty: req.body.trailDifficulty,
+      parking: req.body.parking,
+      depth: req.body.depth,
+      dogs: req.body.dogs,
     });
     console.log("new post");
     res.json(newPost);
