@@ -40,7 +40,7 @@ router.get("/login", (req, res) => {
 
 router.get("/post", (req, res) => {
   res.render("post", {
-    layout: "postlayout",
+  layout: "postlayout",
     style: "post.css",
   });
 });

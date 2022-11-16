@@ -79,3 +79,10 @@ header {
   -webkit-text-stroke: 1px #f8f8f8;
   text-shadow: 0px 2px 4px#4eb5f1;
 }
+
+#example10{
+	color: white;
+	font-size: 110px;
+	-webkit-text-stroke: 1px #F8F8F8;
+	text-shadow: 0px 2px 4px#4eb5f1;
+}
