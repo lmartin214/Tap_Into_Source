@@ -12,22 +12,12 @@
     public database</p>
 </div>
 
-{{!-- "d-flex flex-column" --}}
-{{!-- <div class="row">
-  <div class="col-xs-6">
-    test
-  </div>
-  <div class="col-xs-6" style="background-color:red">
-    test
-  </div>
-</div> --}}
-
 {{! Water Source}}
-<div class="d-flex justify-content-center">
-    <h4 class="">Follow the Prompts</h4>
-          <div class="column">
-  <form id="post-form">
-        <label>What Type of Water Source?</label>
+<form id="post-form">
+  
+<div class="py-5 text-center"><h3>Add any info you can!</h3></div>
+  
+        <label><h4>What Type of Water Source?</label></h4>
           <select class="custom-select d-block w-100" id="type" required="">
             <option value="">Choose...</option>
             <option>Waterfall</option>
@@ -137,7 +127,13 @@
           required=""
         /></div>
 
+{{! container for first row of form }}
+<div class="container-fluid">
+  <div class="row">
+
 {{! Moving or Still? }} 
+<div class="col">
+
 <h4 class="mb-3">Moving or Still Water?</h4>
 <div id="movingOrStill">
 <div class="form-check form-check-inline">
@@ -150,8 +146,10 @@
   <label class="form-check-label" for="inlineCheckbox1">Still Water</label>
 </div>
 </div>
-    
+</div> 
 {{!-- Water Source --}}
+<div class="col">
+
 <h4 class="mb-3">Water Source</h4>
 <div class="form-check form-checkbox">
   <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
@@ -168,7 +166,29 @@
   <label class="form-check-label" for="inlineCheckbox1">Ground Water</label>
 </div>
 
-    
+</div>
+
+{{! Accessibility}}
+<div class="col">
+
+<h4>
+  <label for="state">Accessibility</label>
+  <select class="custom-select d-block w-100" id="accessibility" required="">
+</h4>
+  <option value="">Choose...</option>
+    <option>I hiked in!</option>
+    <option>I drove right up!</option>
+    <option>I did some hiking AND some driving</option>
+  </select>
+</div>
+{{! end of first row container }}
+</div>
+  </div>
+
+
+{{! 2nd row container }}
+<div class="container-fluid">
+  <div class="row">
 {{! Water Testing }}
 <h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label>
 </h4>
@@ -221,21 +241,14 @@
 
 
 {{! Which tests were done? What were the results?}}
-  <h4 class="form-group">
-    <label for="exampleFormControlTextarea1">Which tests were done? What were the results?</label>
-    <textarea class="form-control" id="whichTests" rows="3"></textarea>
-  </h4>
-
-{{! Accessibility}}
-<h4 class="col-md-4 mb-3">
-  <label for="state">Accessibility</label>
-  <select class="custom-select d-block w-100" id="accessibility" required="">
+<h4>
+  <label for="exampleFormControlTextarea1">What were the results?</label>
+  <textarea class="form-control" id="whichTests" rows="3"></textarea>
 </h4>
-  <option value="">Choose...</option>
-    <option>I hiked in!</option>
-    <option>I drove right up!</option>
-    <option>I did some hiking AND some driving</option>
-  </select>
+{{! end of 2nd row container }}
+  </div>
+</div>
+
 
 {{! Trail Difficulty}}
   <h4 class="col-md-4 mb-3">
