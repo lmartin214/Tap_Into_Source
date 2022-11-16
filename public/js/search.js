@@ -6,31 +6,35 @@ const searchPosts = async function (event) {
   event.preventDefault();
   const input = document.querySelector("#zipcode-input-search");
   console.log(input.value);
-  type = type.split(" ").join("+");
+  type = type.split(" ").join("-");
 
   console.log("type", type);
   fetch(`/api/posts/search/${input.value}/${type}`, {
     method: "GET",
   })
     .then((res) => res.json())
-    // .then((data) => console.log(data))
 
     .then((searchResults) => {
       resultsDiv.innerHTML = "";
 
+      // renders searched posts to page //
       searchResults.forEach((post) => {
-        resultsDiv.innerHTML += `<div class="card" style="width: 18rem;">
-              <div class="card-body">
-                  <p class="card-text">${post.id}</p>
-                  <p class="card-text">${post.type}</p>
-                  <p class="card-text">${post.zip}</p>
-                  <p class="card-text">${post.state}</p>
-                  <p class="card-text">${post.accessibility}</p>
-                  <p class="card-text">${post.whichTests}</p>
-                  <p class="card-text">${post.footTraffic}</p>
-                  <p class="card-text">${post.trailDifficulty}</p>
-                  <p class="card-text">${post.parking}</p>
-                  <p class="card-text">${post.dogs}</p>
+        resultsDiv.innerHTML += `<div class="row">
+              <div id="searched-post" class="col">
+                  <h2 id="header,jk9" class=uu"card-text"><span id="headerColor"> ${post.type} </span></h2>
+                  <h1 id="where" class="card-text">${post.country}, ${post.state}, ${post.zip}</h1>
+                 <div id="params">
+                  <p class="card-text"><span id="underline">Foot Traffic:</span>  ${post.footTraffic}</p>
+                  <p class="card-text"><span id="underline">Trail Difficulty:</span>  ${post.trailDifficulty}</p>
+                  <p class="card-text"><span id="underline">Accessibility:</span>  ${post.accessibility}</p>
+                  <p class="card-text"><span id="underline">Tests Done:</span>  ${post.testResults}</p>
+                  <p class="card-text"><span id="underline">Depth:</span>  ${post.depth}</p>
+                  <p class="card-text"><span id="underline">Parking Notes:</span>  ${post.parking}</p>
+                  <p id="last" class="card-text"><span id="underline">Dogs Allowed:</span> ${post.dogs}</p>
+                  </div>
+
+                
+
               </div>
           </div>`;
       });
@@ -42,9 +46,11 @@ document.querySelector("#search-form").addEventListener("submit", searchPosts);
 
 // event listener for water type buttons to grab type value for url //
 const buttons = document.querySelectorAll(".water");
+const results = document.querySelector("#post-card");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     type = event.target.innerHTML;
+    results.classList.remove("hide");
     console.log("type", type);
   });
 });

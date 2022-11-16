@@ -47,7 +47,7 @@ router.post("/", async (req, res) => {
       zip: req.body.zip,
       state: req.body.state,
       accessibility: req.body.accessibility,
-      whichTests: req.body.whichTests,
+      testResults: req.body.testResults,
       footTraffic: req.body.footTraffic,
       trailDifficulty: req.body.trailDifficulty,
       parking: req.body.parking,

@@ -51,20 +51,14 @@
     </div>
   </div>
 
-  <div class="col-md-3" id="post-div">
-    <div id="post-results">
-      <div class="card text-center">
-        <div class="card-body" id="post-card">
-          {{#each searches}}
-            <div id="searchCards">
-              <h5 class="card-title" id="searchResType">{{type}}</h5>
-              <p id="id">{{id}}</p>
-              <p id="zip">{{zip}}</p>
-            </div>
-          {{/each}}
-        </div>
+  <div class="row justify-content-centers hide" id="post-card">
+    {{#each searches}}
+      <div id="searchCards">
+        <h5 class="card-title" id="searchResType">{{type}}</h5>
+        <p id="id">{{id}}</p>
+        <p id="zip">{{zip}}</p>
       </div>
-    </div>
+    {{/each}}
   </div>
 </div>
 
