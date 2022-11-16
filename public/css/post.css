@@ -10,5 +10,9 @@
 #prompts-card {
   width: 80%;
   overflow: scroll;
-  background-color: aqua;
+  background-color: rgb(161, 211, 230);
+}
+
+#postButton {
+  background-color: rgb(76, 168, 204);
 }
