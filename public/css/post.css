@@ -1,4 +1,14 @@
 #parent-card {
   width: 100%;
+}
+
+#api-card {
+  width: 90%;
+  height: 40%;
+}
+
+#prompts-card {
+  width: 80%;
+  overflow: scroll;
   background-color: aqua;
 }

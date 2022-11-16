@@ -1,10 +1,14 @@
-<div class="container-fluid" id="parent-card">
+<div id="parent-card">
+{{! API }}
+  <div class="container-fluid" id="api-card">
   <div class="col-xs-6">
     <h4 class="d-flex justify-content-between align-items-center mb-3">
       <span class="text-muted">Drop a Pin</span>
     </h4>
   </div>
-
+  </div>
+{{! Prompts }}
+<div class="container-fluid" id="prompts-card">
 <div class="col-xs-6">
 <div class="py-5 text-center">
   <h2>Add New Water Source</h2>
@@ -175,17 +179,74 @@
       <h6>Swimmable?</h6>
       <textarea class="form-control" id="depth" rows="3"></textarea>
 </div>
-{{! end of first row container }}
+{{! end of first row }}
 </div>
   </div>
 
+{{! beginning of row }}
+<div class="container-fluid">
+  <div class="row">
+{{! Accessibility}}
+<div class="col">
+<h4>
+  <label for="state">Accessibility</label>
+  <select class="custom-select d-block w-100" id="accessibility" required="">
+</h4>
+  <option value="">Choose...</option>
+    <option>I hiked in!</option>
+    <option>I drove right up!</option>
+    <option>I did some hiking AND some driving</option>
+  </select>
+</div>
+
+{{! Trail Difficulty}}
+<div class="col">
+  <h4 class="col-md-4 mb-3">
+    <label for="difficulty">Trail Difficulty</label>
+  </h4>
+  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
+  <option value="">Choose...</option>
+  <option>easy</option>
+  <option>moderate</option>
+  <option>hard</option>
+  </select>
+</div>
+{{! Parking }}
+<div class="col">
+<div class="form-outline w-25 mb-4">
+  <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
+  <textarea class="form-control" id="parking" rows="3"></textarea>
+</div>
+</div> 
+{{! Foot traffic }}
+<div class="col">
+  <h4 class="col-md-4 mb-3">
+    <label>Foot traffic</label>
+  </h4>
+<select class="custom-select d-block w-100" value="" id="footTraffic" required="">
+  <option>Choose...</option>
+  <option>a lil</option>
+  <option>moderate</option>
+  <option>heavy</option>
+</select>
+</div>
+{{! Dog friendly? }}
+<div class="col">
+<div class="form-outline w-25 mb-4">
+    <h4>Dog friendly?</h4>
+      <textarea class="form-control" id="dogs" rows="3"></textarea>
+</div>
+</div>
+{{! end of row }}
+  </div>
+</div>
 
 {{! 2nd row container }}
 <div class="container-fluid">
   <div class="row">
 {{! Water Testing }}
-<h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label>
-</h4>
+<div class="col">
+<h4 class="mb-3" class="form-group"><label for="exampleFormControlSelect2">Did you test the water?</label></h4>
 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -232,76 +293,23 @@
   <a href="#" class="list-group-item list-group-item-action list-group-item-purple">9. Coliform bacteria present? y/n</a>
   <label class="form-check-label" for="inlineCheckbox2"></label>
 </div>
+</div>
 
-
-{{! Which tests were done? What were the results?}}
+{{! What were the results?}}
+<div class="col">
 <h4>
   <label>What were the results?</label>
   <textarea class="form-control" id="whichTests"></textarea>
 </h4>
-{{! end of 2nd row container }}
+</div>
+{{! end of 2nd row }}
   </div>
 </div>
 
 
-{{! beginning of row }}
-<div class="container-fluid">
-  <div class="row">
-{{! Accessibility}}
-<div class="col">
-
-<h4>
-  <label for="state">Accessibility</label>
-  <select class="custom-select d-block w-100" id="accessibility" required="">
-</h4>
-  <option value="">Choose...</option>
-    <option>I hiked in!</option>
-    <option>I drove right up!</option>
-    <option>I did some hiking AND some driving</option>
-  </select>
-</div>
-
-{{! Trail Difficulty}}
-  <h4 class="col-md-4 mb-3">
-    <label for="difficulty">Trail Difficulty</label>
-  </h4>
-  <select class="custom-select d-block w-100" value="" id="trailDifficulty" required="">If applicable...
-  <option value="">Choose...</option>
-  <option>easy</option>
-  <option>moderate</option>
-  <option>hard</option>
-</select>
-
-{{! Parking }}
-<div class="form-outline w-25 mb-4">
-  <h6 class="form-label">Is there parking? If so, please write any info that would help others</h6>
-  <textarea class="form-control" id="parking" rows="3"></textarea>
-</div>
-     
-{{! Foot traffic }}
-  <h4 class="col-md-4 mb-3">
-    <label>Foot traffic</label>
-  </h4>
-<select class="custom-select d-block w-100" value="" id="footTraffic" required="">
-  <option>Choose...</option>
-  <option>a lil</option>
-  <option>moderate</option>
-  <option>heavy</option>
-</select>
-
-{{! Dog friendly? }}
-<div class="form-outline w-25 mb-4">
-    <h4>Dog friendly?</h4>
-      <textarea class="form-control" id="dogs" rows="3"></textarea>
-</div>
-
-{{! end of row }}
-  </div>
-</div>
-
-
-<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button> 
+<button class="btn btn-primary btn-lg btn-block" type="submit">Post!</button> 
 </form>
+</div>
 </div>
 </div>
 </div>
