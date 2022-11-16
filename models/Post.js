@@ -38,7 +38,7 @@ Post.init(
     },
     testResults: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
     },
     trailDifficulty: {
       type: DataTypes.STRING,

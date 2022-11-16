@@ -1,0 +1,52 @@
+a {
+  position: relative;
+  float: right;
+  padding-top: 20px;
+  padding-right: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  color: gray;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#parent-card {
+  width: 100%;
+}
+
+#map {
+  width: 90%;
+  height: 100%;
+  text-align: center;
+}
+
+#prompts-card {
+  width: 1160px;
+  overflow-y: auto;
+  max-height: 600px;
+  border-color: olivedrab;
+  background-color: rgb(165, 217, 237);
+  border-radius: 90px;
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom: 30px;
+}
+
+#prompts-card::-webkit-scrollbar {
+  display: none;
+}
+
+#postButton {
+  background-color: rgb(76, 168, 204);
+  max-width: 260px;
+  margin-left: 445px;
+  margin-bottom: 30px;
+}
+
+span {
+  background-color: olivedrab;
+  color: white;
+  font-weight: 400;
+}
