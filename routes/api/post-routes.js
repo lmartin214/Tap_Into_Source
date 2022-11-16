@@ -10,8 +10,7 @@ router.get("/", (req, res) => {
   }
 });
 
-//get posts by country
-// get posts by zip
+// get posts by zip and type //
 router.get("/search/:zip/:type?", (req, res) => {
   const { params } = req;
   Object.keys(params).forEach((key) => {
@@ -39,7 +38,6 @@ router.get("/search/:zip/:type?", (req, res) => {
 
 // create new post
 router.post("/", async (req, res) => {
-  console.log("in the route");
   try {
     const newPost = await Post.create({
       type: req.body.type,

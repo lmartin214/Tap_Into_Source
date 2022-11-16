@@ -23,7 +23,7 @@ const sess = {
 // enabeling the use of session with sess paramaters //
 app.use(session(sess));
 
-// sequelize store and handlebars middleware here, if using helper plug in on line 28 //
+// sequelize store and handlebars middleware here //
 const hbs = exphbs.create();
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");

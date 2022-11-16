@@ -34,13 +34,14 @@ const postForm = async function (event) {
   });
   if (response.ok) {
     console.log("Posted!");
-    // redirect to whichever page you want to after you sign up //
+    window.location.replace("/profile");
   } else {
     alert("failed to post");
   }
 };
 
 document.querySelector("#post-form").addEventListener("submit", postForm);
+
 
 // // API
 // // Initialize and add the map
