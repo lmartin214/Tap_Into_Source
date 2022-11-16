@@ -2,11 +2,8 @@
 const Post = require("./Post");
 const User = require("./User");
 
-// Products belongsTo Category
+// adds user_id to each post //
 User.hasMany(Post);
-// Categories have many Products
-
-// Products belongToMany Tags (through ProductTag)
 
 // Tags belongToMany Products (through ProductTag)
 
