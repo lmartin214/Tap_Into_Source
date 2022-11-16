@@ -16,9 +16,10 @@ a:hover {
   width: 100%;
 }
 
-#api-card {
+#map {
   width: 90%;
-  height: 40%;
+  height: 100%;
+  text-align: center;
 }
 
 #prompts-card {
