@@ -16,7 +16,7 @@ const postForm = async function (event) {
   const response = await fetch("/api/posts", {
     method: "POST",
     body: JSON.stringify({
-      type: type.value,
+      type: type.value.split(" ").join("-"),
       country: country.value,
       zip: zip.value,
       state: state.value,
