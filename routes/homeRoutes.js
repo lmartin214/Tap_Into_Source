@@ -9,8 +9,6 @@ router.get("/", (req, res) => {
   });
 });
 
-// router.get('/profile', withAuth ,(req,res)=>{
-
 router.get("/profile", (req, res) => {
   res.render("profile", {
     layout: "profilelayout",
@@ -42,14 +40,20 @@ router.get("/login", (req, res) => {
 
 router.get("/post", (req, res) => {
   res.render("post", {
-    layout: "homelayout",
+  layout: "postlayout",
+    style: "post.css",
   });
 });
 
-router.get("/search", (req, res) => {
+router.get("/search", async (req, res) => {
+  const searchData = await Post.findAll();
+
+  const searches = searchData.map((search) => search.get({ plain: true }));
+  console.log(searches);
   res.render("search", {
     layout: "searchlayout",
     style: "search.css",
+    searches,
   });
 });
 
