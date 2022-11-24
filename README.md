@@ -1,4 +1,4 @@
-#Tap Into Source
+# Tap Into Source
 
 Application built to help users save and share their favorite water sources.
 
@@ -7,7 +7,7 @@ We created an application as a way to help users save and share their favorite b
 In the application users will be able to easily save identifiers for future use such as: location, type of water source,accessibility, the tests that have been run (which would decipher its safety and drinkability), and so forth.
 Posts will be saved to the users profile and will be available to be filtered through with the assist of user selected tags. We utilized Node.js, sequelize and Express.js to create a RESTful API. We also utilized FontAwesome, Jquery, Bootstrap and vanilla Javascript for our front end.
 
-##Screenshots
+## Screenshots
 ![screenshot of application homepage](./public/img/water1.png)
 ![screenshot of registration page](./public/img/water2.png)
 ![screenshot of login page](./public/img/water3.png)
@@ -16,16 +16,16 @@ Posts will be saved to the users profile and will be available to be filtered th
 ![screenshot of search page](./public/img/water6.png)
 ![screenshot of search results](./public/img/water7.png)
 
-###Links
+### Links
 Deployed Site URL: https://tap-into-source.herokuapp.com/
 
-####Contributors
+#### Contributors
 Jacqueline - https://github.com/JacquelineHockin 
 Haley - https://github.com/haleymay21
 Chase - https://github.com/chasebinkley
 Lamar - https://github.com/lmartin214
 
 
-#####Acknowledgments
+##### Acknowledgments
 Shout out to Elon Musk for single handedly destroying Twitter.
 
