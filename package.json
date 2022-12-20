@@ -29,7 +29,6 @@
     "express-session": "^1.17.3",
     "js-datepicker": "^5.18.1",
     "mysql2": "^2.1.0",
-    "node": "^19.3.0",
     "sequelize": "^5.22.5"
   }
 }
