@@ -7,6 +7,7 @@ const sequelize = require("./config/connection");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+const { seedAll } = require("./seeds");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -23,7 +24,7 @@ const sess = {
 // enabeling the use of session with sess paramaters //
 app.use(session(sess));
 
-// sequelize store and handlebars middleware here, if using helper plug in on line 28 //
+// sequelize store and handlebars middleware here //
 const hbs = exphbs.create();
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -31,11 +32,12 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static('public/img'))
+app.use(express.static("public/img"));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. change false to true when you want to recreate db but lose data
-sequelize.sync({ force: true }).then(function () {
+sequelize.sync({ force: true }).then(async function () {
+  await seedAll();
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   });

@@ -1,22 +1,42 @@
-<h1>Profile of Maps</h1>
+<body>
+  <div class="topnav">
+    <a class="active" href="/">Logout</a>
+    <a href="/search">Look Up Stream</a>
+  </div>
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <div class="wrapper">
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <h3>Water Source Location</h3>
-    <!--The div element for the map -->
-    <div id="map"></div>
+    <div class="sidebar">
 
-    <!-- 
-     The `defer` attribute causes the callback to execute after the full HTML
-     document has been parsed. For non-blocking uses, avoiding race conditions,
-     and consistent behavior across browsers, consider loading using Promises
-     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-    -->
-     <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_YP8aCoVnnRWfhHT6ozNbDEFPhshZ81s&callback=initMap">
-     </script>
-    <script src="https://unpkg.com/@googlemaps/js-api-loader@1.0.0/dist/index.min.js"></script>
+      <div class="profile">
+        <img
+          src="water-drop-mascot-doing-thumbs-up-gesture-cute-design_152558-50632.webp"
+        />
+        <p>Username</p>
+
+      </div>
+
+      <ul>
+        <li><a href="/post">Create a Post</a></li>
+        <li><a href="">Delete a Post</a></li>
+        <li><a href="">Account Settings</a></li>
+
+
+
+      </ul>
+    </div>
+    <div class="flex-container">
+        <div id="savedPosts">
+            <div class="posts">This is one saved post.</div>
+            <div class="posts">This is another saved post.</div>
+        </div>
+        
+        <div id="chosenResults"></div>
+    </div>
+
+  </div>
+  <div class="container-1">
+    <h1>Your Water Sources</h1>
+  </div>
+
+</body>

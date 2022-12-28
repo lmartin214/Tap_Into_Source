@@ -1,24 +1,53 @@
 .register-photo {
-    background:#f1f7fc;
-    padding:80px 0;
-  }
-  
-  .register-photo .image-holder {
-    display:table-cell;
-    width:auto;
-    background:url(hands.jpeg);
-    background-size:cover;
-  }
-  
-  .register-photo .form-container {
-    display:table;
-    max-width:900px;
-    width:90%;
-    margin:0 auto;
-    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
-  }
+  background: #f1f7fc;
+  padding: 80px 0;
+}
 
-  
+.register-photo .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(hands.jpeg);
+  background-size: cover;
+}
 
-  
-  
+.register-photo .form-container {
+  display: table;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#password {
+  padding-right: 4px;
+}
+
+.home {
+  position: relative;
+  float: right;
+  color: black;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.home:hover {
+  text-decoration: none;
+  color: rgb(89, 89, 89);
+}
+
+.login {
+  color: black;
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+.login:hover {
+  text-decoration: none;
+  color: rgb(89, 89, 89);
+}
+
+#signup-btn {
+  margin-left: 75px;
+  margin-top: 5px;
+}

@@ -2,11 +2,11 @@
 const Post = require("./Post");
 const User = require("./User");
 
-// Products belongsTo Category
-User.hasMany(Post);
-// Categories have many Products
-
-// Products belongToMany Tags (through ProductTag)
+// adds user_id to each post //
+User.hasMany(Post, {
+  foreignKey: "user_id",
+  onDelete: "cascade",
+});
 
 // Tags belongToMany Products (through ProductTag)
 

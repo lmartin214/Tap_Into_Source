@@ -1,0 +1,225 @@
+/* video styling */
+.water-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* styling of masthead */
+.masthead {
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.masthead .masthead-content {
+  position: relative;
+  max-width: 40rem;
+}
+.masthead .masthead-content h1,
+.masthead .masthead-content .h1 {
+  font-size: 2.5rem;
+}
+.masthead .masthead-content p {
+  font-size: 1.2rem;
+}
+.masthead .masthead-content p strong {
+  font-weight: 700;
+}
+
+/* search input field */
+#zipcode-input-search {
+  min-width: 400px;
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+/* search button */
+#search-btn {
+  min-width: 40px;
+  min-height: 40px;
+  position: relative;
+  top: 5px;
+  left: 7px;
+  border-radius: 25px;
+  color: rgb(13, 215, 255);
+  background-color: olivedrab;
+  border-style: solid;
+  border-width: 2px;
+  border-color: olivedrab;
+  cursor: pointer;
+}
+
+/* droplet icon inside of search button */
+.fa-droplet {
+  min-height: 25px;
+}
+
+/* water type filter buttons */
+.water {
+  background-color: olivedrab;
+  border-color: olivedrab;
+  border-radius: 10px;
+  min-width: 5px;
+}
+
+.water-group {
+  padding-right: 10px;
+}
+
+h1,
+p,
+#zipcode-input-search {
+  margin-left: 20px;
+}
+
+/* home page link */
+.home {
+  position: relative;
+  z-index: 3;
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+  padding-left: 30px;
+}
+
+.home:hover,
+.profile:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* profile page link */
+.profile {
+  position: relative;
+  z-index: 3;
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+#post-div {
+  position: relative;
+  z-index: 100 !important;
+  float: right;
+  min-width: 1000px;
+  padding-left: 10px;
+}
+
+/* class change to hide results box */
+.hide {
+  display: none;
+}
+
+/* masthead styling @ different sizes */
+@media (min-width: 992px) {
+  .masthead {
+    height: 100%;
+    min-height: 0;
+    padding-bottom: 50;
+    padding-right: 70px;
+  }
+  .masthead:before {
+    transform: skewX(-9deg);
+    transform-origin: top right;
+  }
+}
+@media (min-width: 1200px) {
+  .masthead {
+    width: 65vw;
+  }
+}
+
+/* start of results styling */
+#searched-post {
+  background-color: rgba(195, 239, 246, 0.815);
+  width: 315px;
+  max-height: 400px;
+  margin-left: 60px;
+  margin-top: 20px;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+#results {
+  padding: 0;
+  margin: 0;
+  min-width: 1420px;
+}
+
+#post-card {
+  position: relative;
+  z-index: 100 !important;
+  min-height: 500px;
+  background-color: rgba(0, 0, 0, 0.695);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#header {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 8px;
+}
+
+#where {
+  text-align: center;
+  padding-right: 20px;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+#headerColor {
+  background-color: olivedrab;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+p {
+  padding-top: 5px;
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+#last {
+  padding-bottom: 5px;
+}
+
+#params {
+  background-color: rgba(255, 255, 255, 0.924);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  max-height: 265px;
+}
+
+#underline {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+

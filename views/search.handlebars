@@ -1,21 +1,65 @@
-<p> this is where we will search for posts</p>
+<video
+  class="water-video"
+  playsinline="playsinline"
+  autoplay="autoplay"
+  muted="muted"
+  loop="loop"
+><source
+    src="/mp4/water_river_stream_flow_nature_1007.mp4"
+    type="video/mp4"
+  /></video>
+<!-- Masthead -->
+<a class="home" href="/">Tap Into Source</a>
+<a class="profile" href="/profile">Go Back</a>
+<div>
+  <div class="masthead">
+    <div class="masthead-content text-white">
+      <div class="container-fluid px-4 px-lg-0">
+        <h1 class="fst-italic lh-1 mb-4">Look Up Stream</h1>
+        <p class="mb-5">Enter a zip code then filter by the water source</p>
 
-<div class="card">
-  <div class="card-header">
-    <h2>Sign Up</h2>
-  </div>
-  <div id="search" role="tabpanel">
-    <form id="search-form" class="card-body">
-      <div>
-        <label for="enter-zip"></label>
-        <input
-          type="text"
-          id="zipcode-input-search"
-          placeholder="Enter a Zip Code"
-        />
+        <div class="search-container">
+          {{! search form }}
+          <form id="search-form">
+            <input
+              type="text"
+              id="zipcode-input-search"
+              placeholder="Enter a Zip Code.."
+              name="search"
+            />
+            {{! submit button }}
+            <button id="search-btn" type="submit"><i
+                class="fa-solid fa-droplet"
+              ></i></button>
+            {{! water type button filters }}
+            <div class="water-group">
+              <button
+                type="button"
+                class="btn btn-success water"
+              >Waterfall</button>
+              <button type="button" class="btn btn-success water">Lake</button>
+              <button type="button" class="btn btn-success water">River</button>
+              <button type="button" class="btn btn-success water">Pond</button>
+              <button type="button" class="btn btn-success water">Creek</button>
+              <button type="button" class="btn btn-success water">Hot Spring</button>
+              <button type="button" class="btn btn-success water">Cold Spring</button>
+            </div>
+
+          </form>
+        </div>
       </div>
-      <button type="submit" id="search-btn" class="btn">Look Up Stream</button>
-    </form>
+    </div>
+  </div>
+
+  <div class="row justify-content-centers hide" id="post-card">
   </div>
 </div>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
 <script src="/js/search.js"> </script>
