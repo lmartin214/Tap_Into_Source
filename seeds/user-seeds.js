@@ -45,6 +45,10 @@ const userData = [
     username: "IheartWater",
     password: "lovemesumwatersourcesBBY",
   },
+  {
+    username: "lmart",
+    password: "pass1",
+  },
 ];
 
 const seedUsers = () => User.bulkCreate(userData);
