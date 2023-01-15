@@ -14,7 +14,12 @@ const PORT = process.env.PORT || 3001;
 // object will define parameters that a user will have //
 const sess = {
   secret: "secret",
-  cookie: {},
+  cookie: {
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -36,7 +41,7 @@ app.use(express.static("public/img"));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. change false to true when you want to recreate db but lose data
-sequelize.sync({ force: false }).then(async function () {
+sequelize.sync({ force: true }).then(async function () {
   await seedAll();
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
