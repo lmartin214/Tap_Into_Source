@@ -7,7 +7,6 @@ const sequelize = require("./config/connection");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-const { seedAll } = require("./seeds");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -41,8 +40,7 @@ app.use(express.static("public/img"));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server. change false to true when you want to recreate db but lose data
-sequelize.sync({ force: true }).then(async function () {
-  await seedAll();
+sequelize.sync({ force: false }).then(()=> {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   });
