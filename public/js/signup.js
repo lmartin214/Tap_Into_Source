@@ -16,6 +16,7 @@ const signUpForm = async function(event){
      if (response.ok) {
         console.log("signed up")
         // redirect to whichever page you want to after you sign up //
+        document.location.replace('/profile');
      }
      else {
         alert("failed to sign up")
