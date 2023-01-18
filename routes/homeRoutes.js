@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Post } = require("../models/");
-const withAuth = require("../utils/auth")
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   res.render("home", {
@@ -53,16 +53,16 @@ router.get("/post", (req, res) => {
   }
 });
 
-router.get('/post', withAuth, async (req, res) => {
+router.get("/post", withAuth, async (req, res) => {
   try {
     const dbUserData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      attributes: { exclude: ["password"] },
+      order: [["name", "ASC"]],
     });
 
     const users = dbUserData.map((post) => post.get({ plain: true }));
 
-    res.render('post', {
+    res.render("post", {
       users,
       logged_in: req.session.logged_in,
     });
@@ -70,8 +70,6 @@ router.get('/post', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 router.get("/search", async (req, res) => {
   if (!req.session.loggedIn) {

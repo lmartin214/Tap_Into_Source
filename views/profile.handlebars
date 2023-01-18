@@ -1,7 +1,7 @@
 <body>
   <div class="topnav">
-    <a class="active" href="/">Logout</a>
-    <a href="/search">Look Up Stream</a>
+    <button class="active" value="" href="/logout">Logout</button>
+    <button class ="active" href="/search">Look Up Stream</button>
   </div>
 
   <div class="wrapper">
@@ -12,7 +12,7 @@
         <img
           src="water-drop-mascot-doing-thumbs-up-gesture-cute-design_152558-50632.webp"
         />
-        <p>Username</p>
+        <p>Welcome {{user.username}} !</p>
 
       </div>
 
@@ -39,4 +39,6 @@
     <h1>Your Water Sources</h1>
   </div>
 
+
+<script src = "/js/profile.js"> </script>
 </body>

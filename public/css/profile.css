@@ -4,7 +4,7 @@
   width: 101%;
 }
 
-.topnav a {
+.topnav button {
   float: right;
   color: #f2f2f2;
   text-align: center;
@@ -13,12 +13,12 @@
   font-size: 17px;
 }
 
-.topnav a:hover {
+.topnav button:hover {
   background-color: #e4eefa;
   color: black;
 }
 
-.topnav a.active {
+.topnav button.active {
   background-color: rgb(5, 68, 104);
   color: white;
 }

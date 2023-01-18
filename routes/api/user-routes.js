@@ -3,9 +3,10 @@ const { User, Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 // The `/api/users` endpoint
 
+//Post '/' - create a new User
 router.post("/", async (req, res) => {
   try {
-    console.log("Singup pinged")
+    console.log("Signup pinged")
     const newUser = await User.create({
       username: req.body.username,
       password: req.body.password,
@@ -30,6 +31,7 @@ router.delete("/:id", withAuth, async (req, res) => {
   // delete a category by its `id` value
 });
 
+//Post '/login' matches the user's input with the database, if the user exists and the password matches the user will login.
 router.post("/login", (req, res) => {
   console.log("Hitting login route");
   console.log(req.body);
