@@ -1,5 +1,5 @@
 const { Post } = require("../models");
-
+//seeding data for post 
 const postData = [
   {
     type: "Waterfall",

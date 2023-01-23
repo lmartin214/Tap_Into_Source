@@ -1,4 +1,4 @@
-const postForm = async function (event) {
+const postForm = async function (event) {//function that allows user to post data from a form on the webpage.
   event.preventDefault();
   console.log("hello hello!");
   const type = document.querySelector("#type");
@@ -14,7 +14,7 @@ const postForm = async function (event) {
   const dogs = document.querySelector("#dogs");
 
   const response = await fetch("/api/posts", {
-    method: "POST",
+    method: "POST",//sends a fetch POST request with the values, and if successful, redirects the user to the profile page
     body: JSON.stringify({
       type: type.value.split(" ").join("-"),
       country: country.value,

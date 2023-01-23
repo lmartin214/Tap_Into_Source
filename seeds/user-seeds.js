@@ -1,5 +1,5 @@
 const { User } = require("../models");
-
+//seeding data for users
 const userData = [
   {
     username: "tweedledee",

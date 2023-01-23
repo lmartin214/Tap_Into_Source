@@ -1,12 +1,12 @@
-const loginBtn = async function(event){
+const loginBtn = async function(event){ //function that is used to log a user into an application
     event.preventDefault();
     console.log(event)
-    const username = document.querySelector("#username-input-login")
+    const username = document.querySelector("#username-input-login") //grabs both username and passowrd input 
     const password = document.querySelector("#password-input-login")
 
     const response = await fetch("/api/user/login", {
         method: "POST",
-        body: JSON.stringify({
+        body: JSON.stringify({//It then makes a POST request to the API with the username and password and stores the response
             username: username.value,
             password: password.value,  
         }),
@@ -17,9 +17,8 @@ const loginBtn = async function(event){
     console.log(response)
     var data = await response.json()
     console.log(data)
-     if (response.ok) {
+     if (response.ok) {//checks if the response is valid, and if it is, redirects the user to their profile page
         console.log("profile")
-        // redirect to whichever page you want to after you sign up //
         document.location.replace('/profile');
      }
      else {
